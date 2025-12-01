@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password')->nullable();
             $table->string('phone');
             $table->enum('is_admin',[1,0])->default(0);
-             $table->string('username')->nullable()->after('name');
+             $table->string('username')->nullable();
             $table->string('avatar_url')->nullable()->default('/images/users/avatar.png');
             $table->rememberToken();
             $table->timestamps();
