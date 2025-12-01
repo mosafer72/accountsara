@@ -1,0 +1,21 @@
+@extends("Pages.user.user_app")
+@section("user_content")
+    <div class="p-4">
+        <!-- Personal Information -->
+        <div class="mb-4 col-12 col-md-12 m-auto p-5 p-md-20 pt-5 bg-dark rounded-4 text-white">
+            <h5 class="my-10 ">اطلاعات شخصی</h5>
+            <div class="row g-3 p-30">
+                <div class="col-md-12">
+                    <label class="form-label">نام و نام خانوادگی</label>
+                    <input type="text" class="form-control" value="Alex">
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label">شماره موبایل</label>
+                    <input type="text" class="form-control" value="{{ $user->phone }}">
+                </div>
+                <button type="submit" class="btn btn-primary mt-10">Submit</button>
+            </div>
+        </div>
+    </div>
+
+@endsection
