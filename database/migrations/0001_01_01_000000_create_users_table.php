@@ -18,8 +18,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->string('phone');
-            $table->enum('is_admin',[1,0])->default(0);
-             $table->string('username')->nullable();
+            $table->tinyInteger('is_admin')->default(0);
+            $table->string('username')->nullable();
             $table->string('avatar_url')->nullable()->default('/images/users/avatar.png');
             $table->rememberToken();
             $table->timestamps();
