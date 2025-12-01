@@ -96,7 +96,7 @@
                 @endforelse
                 </tbody>
             </table>
-             {!! $orders->links('pagination::default') !!}
+             {!! $products->links('pagination::default') !!}
         </div>
     </div>
 </div>
