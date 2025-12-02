@@ -5,9 +5,10 @@ use App\Http\Controllers\Auth\OtpAuthController;
 use App\Http\Controllers\User\OrderCotroller;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\TicketCotroller;
+use App\Http\Middleware\EnsureUserHasName;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware(['auth', 'hasName'])->group(function(){
+Route::middleware(['auth',EnsureUserHasName::class])->group(function(){
     Route::get('/profile', [ProfileController::class,"index"])->middleware('auth')->name('dashboard');
     Route::get('/profile/orders', [OrderCotroller::class,"orders"])->middleware('auth')->name('profile.orders');
     Route::get('/profile/tickets', [TicketCotroller::class,"tickets"])->middleware('auth')->name('profile.tickets');
