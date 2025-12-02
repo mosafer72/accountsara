@@ -30,7 +30,7 @@ class EnsureUserHasName
             // 🔹 نسخه معمولی (ری‌دایرکت)
             return redirect()
                 ->route('profile')
-                ->withErrors( 'لطفا نام خود را وارد کنید');
+                ->withErrors( 'برای ادامه باید لطفا نام خود را وارد کنید.');
         }
 
         return $next($request);
