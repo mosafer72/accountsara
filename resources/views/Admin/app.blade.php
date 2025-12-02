@@ -19,7 +19,7 @@
             <div class="v-dialog__container" style="display: block;"></div>
             <div class="box__camera default__avatar"></div>
         </div>
-        <span class="profile__name">کاربر : نت کپی</span>
+        <span class="profile__name">کاربر : {{ auth()->user()->name }}</span>
     </div>
     <ul>
         <li class="item-li i-dashboard "><a href="/admin">داشبورد</a></li>
