@@ -6,7 +6,6 @@
             <h5 class="my-10 ">اطلاعات شخصی</h5>
             <form action="{{ route("profile.update") }}" method="post" class="row g-3 p-30">
                 @csrf
-                @method('put')
                 <div class="col-md-12">
                     <label class="form-label">نام و نام خانوادگی</label>
                     <input type="text" name="name" class="form-control" value="{{ $user->phone }}">
