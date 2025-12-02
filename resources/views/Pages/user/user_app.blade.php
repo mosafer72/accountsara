@@ -80,7 +80,7 @@
         }
     </style>
     <div class="bg-dark" style="margin-top:100px">
-        <div class="container py-5 mt-5">
+        <div class="container py-5 " style="margin-top:100px">
             <div class="row">
                 <div class="col-12" >
                     <div class="card border-0 shadow-sm">
