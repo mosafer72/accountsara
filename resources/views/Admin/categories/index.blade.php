@@ -3,6 +3,7 @@
 @section('title', 'لیست دسته‌بندی‌ها')
 
 @section('content')
+    <div class="content">
         <div class="header d-flex item-center bg-white width-100 border-bottom padding-12-30">
             <div class="header__right d-flex flex-grow-1 item-center">
                 <span class="bars"></span>
@@ -100,4 +101,5 @@
                 </table>
             </div>
         </div>
+    </div>
 @endsection
