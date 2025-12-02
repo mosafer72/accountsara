@@ -1,4 +1,4 @@
-@extends("Pages.Admin.app")
+@extends("Admin.app")
 
 @section("content")
 <div class="content">
