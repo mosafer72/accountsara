@@ -21,7 +21,7 @@ class EnsureUserHasName
             return $next($request);
         }
 
-        if ($request->routeIs('profile.edit', 'profile')) {
+        if ($request->routeIs('profile.update', 'profile')) {
             return $next($request);
         }
 
