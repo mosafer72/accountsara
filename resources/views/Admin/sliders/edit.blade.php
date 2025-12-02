@@ -1,6 +1,8 @@
 @extends('Admin.app')
 
 @section('content')
+        @include("Admin.layouts.header")
+
     <div class="breadcrumb">
         <ul>
             <li><a href="{{ route('admin.dashboard') }}">پیشخوان</a></li>
