@@ -14,6 +14,6 @@
         overflow:hidden;
     }
     .header-section .navbar-brand .logo2{
-        height: 100px;
+        height: 100px !important;
     }
 </style>
