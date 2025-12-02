@@ -50,7 +50,7 @@
                 @foreach ($last_products as $product)
                   <div class="card-item d-flex align-items-center gap-4">
                     <div class="card-img-area rounded-circle overflow-hidden">
-                      <img src="/{{ asset('storage/'.$product->image) }}" width="60" alt="{{ $product->title }}">
+                      <img src="{{ asset('storage/'.$product->image) }}" width="60" alt="{{ $product->title }}">
                     </div>
                     <div class="card-info">
                       <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">{{ $product->title }}
@@ -177,7 +177,7 @@
                 <div class="tournament-card p-xl-4 p-3 bgn-4">
                   <div class="tournament-img mb-8 position-relative">
                     <div class="img-area overflow-hidden">
-                      <img src="/{{ asset('storage/'.$row->image) }}" width="60" alt="{{ $row->title }}">
+                      <img src="{{ asset('storage/'.$row->image) }}" width="60" alt="{{ $row->title }}">
                     </div>
                     <span class="card-status position-absolute end-0 py-2 px-6 tcn-1 fs-sm">
                       <a href="{{ route("product.show_more", ["id" => $row->id]) }}" class="dot-icon alt-icon pe-3">مشاهده</a>
@@ -252,7 +252,7 @@
                       <div class="game-card-border"></div>
                       <div class="game-card-border-overlay"></div>
                       <div class="game-img alt">
-                        <img src="/{{ asset('storage/'.$pro->image) }}" width="60" alt="{{ $pro->title }}">
+                        <img src="{{ asset('storage/'.$pro->image) }}" width="60" alt="{{ $pro->title }}">
                       </div>
                       <div class="game-link d-center">
                         <a href="{{ route("product.show_more", ["id" => $pro->id]) }}" class="btn2">
