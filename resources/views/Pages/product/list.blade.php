@@ -1,6 +1,6 @@
 @extends("Pages.layouts.master")
 @section("content")
-    <section class="tournament-section pb-120 pt-120 mt-lg-0 mt-sm-15 mt-10">
+    <section class="tournament-section pb-120 pt-120 mt-sm-15 mt-120">
         <div class="tournament-wrapper alt">
             <div class="container">
                 <div class="row justify-content-between align-items-end mb-8">
