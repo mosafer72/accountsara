@@ -13,12 +13,12 @@ class BannerController extends Controller
     public function index()
     {
         $banners = Banner::orderBy('created_at', 'desc')->get();
-        return view('Admin.Banners.index', compact('banners'));
+        return view('Admin.banners.index', compact('banners'));
     }
 
     public function create()
     {
-        return view('Admin.Banners.create');
+        return view('Admin.banners.create');
     }
 
     public function store(Request $request)
@@ -51,7 +51,7 @@ class BannerController extends Controller
 
     public function edit(Banner $banner)
     {
-        return view('Admin.Banners.edit', compact('banner'));
+        return view('Admin.banners.edit', compact('banner'));
     }
 
     public function update(Request $request, Banner $banner)
