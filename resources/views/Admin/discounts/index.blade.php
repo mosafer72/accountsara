@@ -16,7 +16,7 @@
 
     <div class="breadcrumb">
         <ul>
-            <li><a href="{{ route('dashboard') }}">پیشخوان</a></li>
+            <li><a href="{{ route('admin.dashboard') }}">پیشخوان</a></li>
             <li><a href="{{ route('admin.discounts.index') }}" class="is-active">تخفیف‌ها</a></li>
         </ul>
     </div>

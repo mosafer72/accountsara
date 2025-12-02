@@ -16,7 +16,7 @@
 
     <div class="breadcrumb">
         <ul>
-            <li><a href="{{ route('dashboard') }}">پیشخوان</a></li>
+            <li><a href="{{ route('admin.dashboard') }}">پیشخوان</a></li>
             <li><a href="{{ route('admin.comments.index') }}">کامنت‌ها</a></li>
             <li><a href="#" class="is-active">ثبت کامنت</a></li>
         </ul>

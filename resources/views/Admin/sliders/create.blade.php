@@ -4,7 +4,7 @@
 <div class="content">
     <div class="breadcrumb">
         <ul>
-            <li><a href="{{ route('dashboard') }}">پیشخوان</a></li>
+            <li><a href="{{ route('admin.dashboard') }}">پیشخوان</a></li>
             <li><a href="{{ route('admin.sliders.index') }}">اسلایدشو</a></li>
             <li><a href="#" class="is-active">ایجاد اسلاید جدید</a></li>
         </ul>

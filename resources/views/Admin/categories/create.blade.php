@@ -25,7 +25,7 @@
 
         <div class="breadcrumb">
             <ul>
-                <li><a href="{{ route('dashboard') }}">پیشخوان</a></li>
+                <li><a href="{{ route('admin.dashboard') }}">پیشخوان</a></li>
                 <li><a href="{{ route('admin.categories.index') }}">دسته‌بندی‌ها</a></li>
                 <li><a href="#" class="is-active">ایجاد دسته‌بندی جدید</a></li>
             </ul>

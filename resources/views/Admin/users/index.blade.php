@@ -25,7 +25,7 @@
 
     <div class="breadcrumb">
         <ul>
-            <li><a href="{{ route('dashboard') }}">پیشخوان</a></li>
+            <li><a href="{{ route('admin.dashboard') }}">پیشخوان</a></li>
             <li><a href="{{ route('admin.users.index') }}" class="is-active">کاربران</a></li>
         </ul>
     </div>
