@@ -55,7 +55,7 @@
                             <img class="w-100" src="/assets/img/star.png" alt="img">
                         </div>
                         <div class="team-info-details">
-                            <h3 class="team-info-text tcn-1">{{ $product->sell_count }}</h3>
+                            <h3 class="team-info-text tcn-1">{{ $product->sell_count }} نفر از ما</h3>
                             <span class="team-info-title tcn-6">این محصول را خریده‌اند</span>
                         </div>
                     </div>
