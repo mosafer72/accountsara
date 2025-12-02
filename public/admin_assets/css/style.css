@@ -1875,3 +1875,12 @@ span.tagRemove:hover {
 .notification__box .title__noti{
     padding: 15px 0;
 }
+
+.alert{
+  border: 1px solid #ccc;
+    padding: 13px;
+    margin-bottom: 22px;
+    background: antiquewhite;
+    border-radius: 10px;
+    color: brown;
+}
