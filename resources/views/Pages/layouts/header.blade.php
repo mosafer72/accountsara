@@ -58,7 +58,7 @@
                                 <i class="ti ti-user"></i>
                             </span>
                             <span
-                                class="user-name d-none d-xxl-block text-nowrap">{{ auth()->user()->phone ? auth()->user()->name : auth()->user()->phone }}</span>
+                                class="user-name d-none d-xxl-block text-nowrap">{{ auth()->user()->name ? auth()->user()->name : auth()->user()->phone }}</span>
                             <i class="ti ti-chevron-down d-none d-xxl-block"></i>
                         </div>
                     </div>
