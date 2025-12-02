@@ -34,6 +34,7 @@
                     <div class="tabcontents">
                         <div class="tabitem active">
                             <div class="row justify-content-md-start justify-content-center g-6">
+                                @if(count($products)>0)
                                 @foreach ($products as $product)
                                     <div class="col-xl-4 col-md-6 col-sm-10">
                                     <div class="tournament-card p-xl-4 p-3 pb-xl-8 bgn-4">
@@ -86,6 +87,11 @@
                                     </div>
                                 </div>
                                 @endforeach
+                                @else
+                                    <div class="alert alert-danger">
+                                             به این دسته بندی به زودی محصول اضافه خواهد شد.
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
