@@ -3,8 +3,8 @@
 @section('title', 'لیست دسته‌بندی‌ها')
 
 @section('content')
-    <div class="content">
-        <div class="header d-flex item-center bg-white width-100 border-bottom padding-12-30">
+      <div class="content">
+          <div class="header d-flex item-center bg-white width-100 border-bottom padding-12-30">
             <div class="header__right d-flex flex-grow-1 item-center">
                 <span class="bars"></span>
                 <a class="header__logo" href="{{ url('/') }}"></a>
@@ -56,50 +56,45 @@
                     </thead>
 
                     <tbody>
-                        @forelse ($categories as $category)
-                            <tr role="row">
-                                <td><a href="">{{ $category->id }}</a></td>
-                                <td><a href="">{{ $category->name }}</a></td>
-                                <td>{{ $category->description ?? '-' }}</td>
-                                <td>{{ jdate($category->created_at)->format('Y/m/d') }}</td>
-                                <td>
-                                    @if($category->status)
-                                        <span class="badge bg-success">فعال</span>
-                                    @else
-                                        <span class="badge bg-secondary">غیرفعال</span>
-                                    @endif
-                                </td>
-                                <td>
-                                    <form action="{{ route('admin.categories.destroy', $category) }}" method="POST"
-                                        class="d-inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="item-delete mlg-15" title="حذف"></button>
-                                    </form>
+                    @forelse ($categories as $category)
+                        <tr role="row">
+                            <td><a href="">{{ $category->id }}</a></td>
+                            <td><a href="">{{ $category->name }}</a></td>
+                            <td>{{ $category->description ?? '-' }}</td>
+                            <td>{{ jdate($category->created_at)->format('Y/m/d') }}</td>
+                            <td>
+                                @if($category->status)
+                                    <span class="badge bg-success">فعال</span>
+                                @else
+                                    <span class="badge bg-secondary">غیرفعال</span>
+                                @endif
+                            </td>
+                            <td>
+                                <form action="{{ route('admin.categories.destroy', $category) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="item-delete mlg-15" title="حذف"></button>
+                                </form>
 
-                                    <form action="{{ route('admin.categories.toggle', $category) }}" method="POST"
-                                        class="d-inline">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit"
-                                            class="{{ $category->status ? 'item-reject' : 'item-confirm' }} mlg-15"
+                                <form action="{{ route('admin.categories.toggle', $category) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="{{ $category->status ? 'item-reject' : 'item-confirm' }} mlg-15"
                                             title="{{ $category->status ? 'غیرفعال کردن' : 'فعال کردن' }}"></button>
-                                    </form>
+                                </form>
 
-                                    <a href="{{ route('admin.categories.edit', $category) }}" class="item-edit mlg-15"
-                                        title="ویرایش"></a>
-                                    <a href="{{ route('admin.categories.show', $category) }}" class="item-eye mlg-15"
-                                        title="مشاهده"></a>
-                                </td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="6" class="text-center">هیچ دسته‌بندی‌ای یافت نشد.</td>
-                            </tr>
-                        @endforelse
+                                <a href="{{ route('admin.categories.edit', $category) }}" class="item-edit mlg-15" title="ویرایش"></a>
+                                <a href="{{ route('admin.categories.show', $category) }}" class="item-eye mlg-15" title="مشاهده"></a>
+                            </td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="6" class="text-center">هیچ دسته‌بندی‌ای یافت نشد.</td>
+                        </tr>
+                    @endforelse
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
+      </div>
 @endsection
