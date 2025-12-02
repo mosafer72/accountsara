@@ -22,7 +22,7 @@ class ProfileController extends Controller
             'name'=> 'required|max:255',
         ]);
 
-        $user = User::findOrFail(auht()->user()->id);
+        $user = User::findOrFail(auth()->user()->id);
         $user->name=$request->name;
         $user->save();
         return view("Pages.user.profile",compact("user"))
