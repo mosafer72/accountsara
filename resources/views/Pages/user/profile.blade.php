@@ -4,14 +4,16 @@
         <!-- Personal Information -->
         <div class="mb-4 col-12 col-md-12 m-auto p-5 p-md-20 pt-5 bg-dark rounded-4 text-white">
             <h5 class="my-10 ">اطلاعات شخصی</h5>
-            <form class="row g-3 p-30">
+            <form action="{{ route("profile.update") }}" method="post" class="row g-3 p-30">
+                @csrf
+                @method('put')
                 <div class="col-md-12">
                     <label class="form-label">نام و نام خانوادگی</label>
-                    <input type="text" class="form-control" value="Alex">
+                    <input type="text" name="name" class="form-control" value="{{ $user->phone }}">
                 </div>
                 <div class="col-md-12">
                     <label class="form-label">شماره موبایل</label>
-                    <input type="text" class="form-control" value="{{ $user->phone }}">
+                    <input type="" class="form-control" value="{{ $user->phone }}">
                 </div>
                 <button type="submit" class="btn btn-primary mt-10">Submit</button>
             </form>
