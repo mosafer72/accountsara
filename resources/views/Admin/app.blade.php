@@ -30,7 +30,7 @@
         <li class="item-li i-banners {{ request()->is('*/banner*') ? 'is-active' : '' }}"><a href="{{ route("admin.banners.index") }}">بنر ها</a></li>
         <li class="item-li i-articles"><a href="articles.html">مقالات</a></li>
         <li class="item-li i-ads"><a href="ads.html">تبلیغات</a></li>
-        <li class="item-li i-comments {{ request()->is('*/comment*') ? 'is-active' : '' }}"><a href="{{ route("admin.comments.index") }}"> نظرات</a></li>
+        <!-- <li class="item-li i-comments {{ request()->is('*/comment*') ? 'is-active' : '' }}"><a href="{{ route("admin.comments.index") }}"> نظرات</a></li> -->
         <li class="item-li i-tickets {{ request()->is('*/ticket*') ? 'is-active' : '' }}"><a href="{{ route("admin.tickets.index") }}"> تیکت ها</a></li>
         <li class="item-li i-discounts {{ request()->is('*/discount*') ? 'is-active' : '' }}"><a href="{{ route("admin.discounts.index") }}">تخفیف ها</a></li>
         <li class="item-li i-transactions {{ request()->is('*/order*') ? 'is-active' : '' }}"><a href="{{ route("admin.orders.index") }}">تراکنش ها</a></li>
