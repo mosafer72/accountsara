@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\Admin\TicketController;
 use App\Http\Controllers\Admin\AdminAuthController;
 use Illuminate\Support\Facades\Route;
-Route::prefix('admin')->as('admin.')->group( function () {
+Route::middleware(['auth', 'hasName'])->prefix('admin')->as('admin.')->group( function () {
     Route::get('', [DashboardController::class,"index"])->name("dashboard");
     Route::get('orders', [OrderController::class,"index"])->name("orders.index");
     Route::resource('/sliders', SliderController::class);
