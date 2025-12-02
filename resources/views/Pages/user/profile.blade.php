@@ -8,7 +8,7 @@
                 @csrf
                 <div class="col-md-12">
                     <label class="form-label">نام و نام خانوادگی</label>
-                    <input type="text" name="name" class="form-control" value="{{ $user->phone }}">
+                    <input type="text" name="name" class="form-control" value="{{ $user->name }}">
                 </div>
                 <div class="col-md-12">
                     <label class="form-label">شماره موبایل</label>
