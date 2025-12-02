@@ -23,7 +23,7 @@
     </div>
     <ul>
         <li class="item-li i-dashboard "><a href="/admin">داشبورد</a></li>
-        <li class="item-li i-courses  {{ request()->is('*/product*') ? 'is-active' : '' }}"><a href="{{ route("admin.products.index") }}">دوره ها</a></li>
+        <li class="item-li i-courses  {{ request()->is('*/product*') ? 'is-active' : '' }}"><a href="{{ route("admin.products.index") }}">محصولات</a></li>
         <li class="item-li i-users {{ request()->is('*/user*') ? 'is-active' : '' }}"><a href="{{ route("admin.users.index") }}"> کاربران</a></li>
         <li class="item-li i-categories {{ request()->is('*/categor*') ? 'is-active' : '' }}"><a href="{{ route("admin.categories.index") }}">دسته بندی ها</a></li>
         <li class="item-li i-slideshow {{ request()->is('*/slider*') ? 'is-active' : '' }}"><a href="{{ route("admin.sliders.index") }}">اسلایدشو</a></li>
