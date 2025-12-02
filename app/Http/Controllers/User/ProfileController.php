@@ -16,7 +16,7 @@ class ProfileController extends Controller
 
 
     // به‌روزرسانی دسته
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $request->validate([
             'name'=> 'required|max:255',
