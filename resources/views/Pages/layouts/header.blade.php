@@ -115,7 +115,7 @@
                         {{ auth()->user()->phone ? auth()->user()->name : auth()->user()->phone }}</span>
                 </div>
             </div>
-            <a href="{{ route("dashboard") }}" class="bttn account-item">پروفایل کاربری</a>
+            <a href="{{ route("profile") }}" class="bttn account-item">پروفایل کاربری</a>
             <a href="{{ route("logout") }}" class="bttn account-item">خروج</a>
         </div>
     </div>
