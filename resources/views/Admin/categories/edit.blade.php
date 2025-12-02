@@ -83,8 +83,8 @@
                         <div class="col-12 margin-bottom-15">
                             <label class="label">وضعیت</label>
                             <select name="status" class="input">
-                                <option value="1" {{ $category->status ? 'selected' : '' }}>فعال</option>
-                                <option value="0" {{ !$category->status ? 'selected' : '' }}>غیرفعال</option>
+                                <option value="active" {{ $category->status ? 'selected' : '' }}>فعال</option>
+                                <option value="inactive" {{ !$category->status ? 'selected' : '' }}>غیرفعال</option>
                             </select>
                         </div>
 
