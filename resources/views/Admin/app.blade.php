@@ -19,7 +19,7 @@
             <div class="v-dialog__container" style="display: block;"></div>
             <div class="box__camera default__avatar"></div>
         </div>
-        <span class="profile__name">کاربر : {{ auth()->user()->name }}</span>
+        <span class="profile__name">کاربر : {{ (auth()->user()->name) ? auth()->user()->name : auth()->user()->phone }}</span>
     </div>
     <ul>
         <li class="item-li i-dashboard "><a href="/admin">داشبورد</a></li>
