@@ -39,7 +39,7 @@
                                     <div class="tournament-card p-xl-4 p-3 pb-xl-8 bgn-4">
                                         <div class="tournament-img mb-8 position-relative">
                                             <div class="img-area overflow-hidden">
-                                                <img class="w-100" src="/{{ $product->image }}" alt="مسابقات">
+                                                <img class="w-100" src="{{ asset('storage/'.$product->image) }}" alt="مسابقات">
                                             </div>
                                             <span class="card-status position-absolute end-0 py-2 px-6 tcn-1 fs-sm">
                                                  <a href="{{ route("product.show_more", ["id" => $product->id]) }}"
