@@ -21,7 +21,7 @@ class EnsureUserHasName
             return $next($request);
         }
 
-        if ($request->routeIs('user.profile.edit', 'user.panel')) {
+        if ($request->routeIs('user.profile.edit')) {
             return $next($request);
         }
 
@@ -29,7 +29,7 @@ class EnsureUserHasName
 
             // 🔹 نسخه معمولی (ری‌دایرکت)
             return redirect()
-                ->route('admin.dashboard')
+                ->route('profile')
                 ->with('warning', 'لطفا نام خود را وارد کنید');
         }
 
