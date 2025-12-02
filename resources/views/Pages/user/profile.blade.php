@@ -7,9 +7,15 @@
                 </div>
             @endif
 
-            @if(session('error'))
-                <div class="alert alert-danger">{{ session('error') }}</div>
-            @endif
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul class="m-0">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
         <!-- Personal Information -->
         <div class="mb-4 col-12 col-md-12 m-auto p-5 p-md-20 pt-5 bg-dark rounded-4 text-white">
