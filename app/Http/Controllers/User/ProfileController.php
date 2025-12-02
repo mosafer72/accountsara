@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -11,4 +12,21 @@ class ProfileController extends Controller
         $user = auth()->user();
         return view("Pages.user.profile",compact("user"));
     }
+
+
+
+    // به‌روزرسانی دسته
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name'        => 'required|max:255',
+        ]);
+
+        $user = User::findOrFail(auht()->user()->id);
+        $user->name=$request->name;
+        $user->save();
+        return view("Pages.user.profile",compact("user"))
+                         ->with('success', 'دسته‌بندی با موفقیت به‌روزرسانی شد.');
+    }
+
 }

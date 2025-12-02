@@ -9,7 +9,8 @@ use App\Http\Middleware\EnsureUserHasName;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth',EnsureUserHasName::class])->group(function(){
-    Route::get('/profile', [ProfileController::class,"index"])->middleware('auth')->name('dashboard');
+    Route::get('/profile', [ProfileController::class,"index"])->middleware('auth')->name('profile');
+    Route::post('/profile/update', [ProfileController::class,"update"])->middleware('auth')->name('profile.update');
     Route::get('/profile/orders', [OrderCotroller::class,"orders"])->middleware('auth')->name('profile.orders');
     Route::get('/profile/tickets', [TicketCotroller::class,"tickets"])->middleware('auth')->name('profile.tickets');
     Route::get('/profile/tickets/create/{id?}', [TicketCotroller::class,"create"])->middleware('auth')->name('profile.tickets.create');
