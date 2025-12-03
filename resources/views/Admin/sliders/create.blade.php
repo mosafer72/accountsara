@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="content">
-        @include("Admin.layouts.header")
+        @include("Admin.layout.header")
 
     <div class="breadcrumb">
         <ul>

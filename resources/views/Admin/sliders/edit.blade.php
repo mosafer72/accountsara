@@ -1,7 +1,7 @@
 @extends('Admin.app')
 
 @section('content')
-        @include("Admin.layouts.header")
+        @include("Admin.layout.header")
 
     <div class="breadcrumb">
         <ul>
