@@ -10,6 +10,7 @@ class SettingController extends Controller
 {
     public function update(Request $request)
     {
+        die("sdfsdf");
         foreach ($request->except('_token') as $key => $value) {
             Setting::set($key, $value);
         }

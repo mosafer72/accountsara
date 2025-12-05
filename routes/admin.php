@@ -46,12 +46,7 @@ Route::middleware(['auth',isAdmin::class])->prefix('admin')->as('admin.')->group
     Route::patch('tickets/{ticket}/toggle',[TicketController::class,'toggleStatus'])->name('tickets.toggle');
     Route::get('login', [AdminAuthController::class,'showLoginForm'])->name('login');
     Route::post('login', [AdminAuthController::class,'login'])->name('login.submit');
-    // صفحه فرم تنظیمات
-    Route::get('/settings', [SettingController::class, 'index'])
-         ->name('settings.index');
-
-    // ذخیره تنظیمات
-    Route::post('/settings/update', [SettingController::class, 'update'])
-         ->name('settings.update');
+    Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
+    Route::post('/settings/update', [SettingController::class, 'update'])->name('settings.update');
 
 });
