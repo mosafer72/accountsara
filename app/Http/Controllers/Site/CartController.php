@@ -55,7 +55,7 @@ class CartController extends Controller
 
             return redirect()->route('product.show_more',["id"=>$id])->with('success', 'محصول با با موفقیت به سید خرید شما اضافه شد.');
         }else{
-            return redirect()->route('product.show_more',["id"=>$id])->with('warning', 'این محصول در سید خرید شما وجود دارد!');
+            return redirect()->route('product.show_more',["id"=>$id])->withErrors( 'این محصول در سید خرید شما وجود دارد!');
         }
     }
 
