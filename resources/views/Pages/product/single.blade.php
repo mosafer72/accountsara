@@ -55,7 +55,7 @@
                             <img class="w-100" src="/assets/img/price.png" alt="img">
                         </div>
                         <div class="team-info-details">
-                            <h3 class="team-info-text tcn-1 mt-2">{{ number_format(intVal(setting("doller_price"))) }} تومان </h3>
+                            <h3 class="team-info-text tcn-1 mt-2">{{ number_format($product->price * intval(setting("doller_price"))) }} تومان </h3>
                             <span class="team-info-title tcn-6">قیمت </span>
                         </div>
                     </div>
