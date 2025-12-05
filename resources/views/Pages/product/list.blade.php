@@ -40,7 +40,7 @@
                                     <div class="tournament-card p-xl-4 p-3 pb-xl-8 bgn-4">
                                         <div class="tournament-img mb-8 position-relative">
                                             <div class="img-area overflow-hidden">
-                                                <img class="w-100" src="{{ asset('storage/'.$product->image) }}" alt="مسابقات">
+                                                <img class="w-100" src="{{ asset('storage/'.$product->image) }}" alt="{{ $product->title }}">
                                             </div>
                                             <span class="card-status position-absolute end-0 py-2 px-6 tcn-1 fs-sm">
                                                  <a href="{{ route("product.show_more", ["id" => $product->id]) }}"
@@ -66,7 +66,7 @@
                                                 <div
                                                     class="price-money bgn-3 d-flex align-items-center gap-3 py-2 px-3 h-100">
                                                     <div class="d-flex align-items-center gap-2">
-                                                        <img class="" style="width:30px" src="/assets/img/tether.png" alt="تتر">
+                                                        <img class="" style="width:30px" src="/assets/img/price.png" alt="تتر">
                                                         <span class="tcn-1 fs-sm">{{ number_format($product->price) }} تومان </span>
                                                     </div>
                                                 </div>
