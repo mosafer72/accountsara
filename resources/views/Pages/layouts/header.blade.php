@@ -49,7 +49,7 @@
                         <span  class="text-nowrap d-none d-xl-block">ثبت نام |‌ ورود</span>
                     </a>
                 @else
-                    <button class="ntf-btn box-style fs-2xl p-3">
+                    <button class="ntf-btn box-style fs-2xl p-4">
                         <i class="ti ti-shopping-cart"></i>
                     </button>
                     <div class="header-profile pointer">
