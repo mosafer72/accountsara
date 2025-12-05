@@ -25,13 +25,13 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users',
+            'phone' => 'required|number|min:11|max:11|unique:users',
             'password' => 'required|min:6|confirmed',
         ]);
 
         User::create([
             'name' => $request->name,
-            'email' => $request->email,
+            'phone' => $request->phone,
             'password' => Hash::make($request->password),
             'is_admin' => $request->is_admin ?? false,
         ]);
@@ -48,12 +48,12 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,' . $user->id,
+            'phone' => 'required|emaphoneil|unique:users,email,' . $user->id,
         ]);
 
         $user->update([
             'name' => $request->name,
-            'email' => $request->email,
+            'phone' => $request->phone,
             'is_admin' => $request->is_admin ?? false,
         ]);
 
