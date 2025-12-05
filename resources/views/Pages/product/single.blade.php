@@ -13,6 +13,16 @@
                 @if(session('success'))
                     <div class="alert alert-success m-2 p-2">{{ session('success') }}</div>
                 @endif
+                @if ($errors->any())
+
+                <div class="alert alert-danger">
+                    <ul class="m-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
                 <div class="col-12 mb-lg-20 mb-15 pb-lg-10 pb-6">
                     <div class="parallax-banner-area parallax-container">
                         <div class="parallax-img team-banner position-relative"
