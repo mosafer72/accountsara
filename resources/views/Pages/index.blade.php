@@ -360,7 +360,7 @@
         <div class="col-lg-6">
           <span class="display-three tcn-1 cursor-scale growUp mb-8 d-block title-anim">بروز باشید</span>
           <span class="fs-lg tcn-6">سوال یا بازخوردی دارید؟ ما از اینکه با شما در ارتباط باشیم خوشحال میشویم. با
-            تیم ما تماس بگیرید یا از پلتفرم ما استفاده کنید</span>
+            .تیم ما تماس بگیرید یا از پلتفرم ما استفاده کنید</span>
         </div>
         <div class="col-xl-5 col-lg-6">
           <form action="#">
