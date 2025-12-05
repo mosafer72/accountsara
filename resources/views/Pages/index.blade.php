@@ -55,7 +55,7 @@
                     <div class="card-info">
                       <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">{{ $product->title }}
                       </h4>
-                      <p class="card-text tcs-1 fw-medium">+{{number_format($product->price)}} تومان</p>
+                      <p class="card-text tcs-1 fw-medium">{{ number_format($product->price * intval(setting("doller_price"))) }} تومان</p>
                     </div>
                   </div>
                   <div class="hr-line"></div>
@@ -127,7 +127,7 @@
                   <div class="card-info d-center gap-3 py-1 px-3">
                     <div class="d-flex align-items-center gap-2">
                       <img class="" style="width:30px;height:30px" src="assets/img/tether.png" alt="تتر">
-                      <span class="tcn-1 fs-xs">{{ number_format($slider->price) }} تومان </span>
+                      <span class="tcn-1 fs-xs">{{ number_format($slider->price * intval(setting("doller_price"))) }} تومان </span>
                     </div>
                   </div>
                 </div>
@@ -195,7 +195,7 @@
                       <div class="price-money bgn-3 d-flex align-items-center gap-3 py-2 px-3 h-100">
                         <div class="d-flex align-items-center gap-2">
                           <img class="" style="width:50px" src="assets/img/tether.png" alt="تتر">
-                          <span class="tcn-1 fs-sm">{{ number_format($product->price) }}</span>
+                          <span class="tcn-1 fs-sm">{{ number_format($product->price * intval(setting("doller_price"))) }}</span>
                         </div>
                       </div>
                       <div class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
