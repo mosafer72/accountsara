@@ -8,9 +8,12 @@ use App\Models\Setting;
 
 class SettingController extends Controller
 {
+    public function index(){
+        return view("Admin.settings.index");
+    }
+
     public function update(Request $request)
     {
-        die("sdfsdf");
         foreach ($request->except('_token') as $key => $value) {
             Setting::set($key, $value);
         }
