@@ -64,11 +64,11 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="team-info p-xl-8 p-md-6 p-2 bgn-4 d-flex align-items-center gap-lg-6 gap-4 rounded">
                             <a href="{{ route("cart.add", ["id" => $product->id]) }}"
-                                class="btn-rounded-cus wallet-btn border-0 d-flex align-items-center gap-3 p-xl-2 p-0 ps-xl-6 rounded-3 position-relative">
+                                class="btn-rounded-cus wallet-btn border-0 d-flex align-items-center gap-3 p-xl-2 p-0 ps-xl-6 rounded-3 position-relative pe-3">
                                 <span class="btn-circle fs-2xl">
                                     <i class="ti ti-shopping-cart"></i>
                                 </span>
-                                <span class="text-nowrap p-3">اضافه به سید خرید</span>
+                                <span class="text-nowrap p-3">اضافه به سبد خرید</span>
                             </a>
                         </div>
                     </div>
