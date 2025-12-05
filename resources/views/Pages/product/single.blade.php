@@ -41,7 +41,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="team-info p-xl-8 p-md-6 p-2 bgn-4 d-flex align-items-center gap-lg-6 gap-4 rounded">
                         <div class="team-info-icon">
-                            <img class="w-100" src="/assets/img/wallet2.png" alt="img">
+                            <img class="w-100" src="/assets/img/price.png" alt="img">
                         </div>
                         <div class="team-info-details">
                             <h3 class="team-info-text tcn-1">{{ number_format($product->price) }} تومان </h3>
