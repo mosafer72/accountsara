@@ -17,11 +17,12 @@ class isAdmin
     public function handle(Request $request, Closure $next): Response
     {
         $user = Auth::user();
+        dd($user->isAdmin());
         if (!$user) {
             return $next($request);
         }
 
-        if ($user->isAdmin >= 1) {
+        if ($user->isAdmin() >= 1) {
             return $next($request);
         }else{
            abort(404);
