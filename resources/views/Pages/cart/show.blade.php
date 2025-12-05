@@ -45,7 +45,7 @@
     </div>
 
     @php
-      $subtotal = collect($data["cart"])->sum(fn($i) => $i->qty * $i->unit_price);
+      $subtotal = collect($data["cart"])->sum(fn($i) => $i->qty * $i->unit_price  * intval(setting("doller_price")));
       $coupon   = session('cart_coupon');
       $discount = $coupon['discount'] ?? 0;
       $payable  = max($subtotal - $discount, 0);
