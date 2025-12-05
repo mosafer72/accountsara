@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-12 margin-bottom-15">
                         <label class="label">قیمت دلار</label>
-                        <input type="text" name="doller_price" value="{{ old('doller_price', $settings->doller_price ?? '') }}" class="input" placeholder="123400">
+                        <input type="text" name="doller_price" value="{{ setting('doller_price') }}" class="input" placeholder="123400">
                     </div>
                     <div class="col-12 margin-top-20">
                         <button type="submit" class="btn btn-brand">ذخیره تغییرات</button>
