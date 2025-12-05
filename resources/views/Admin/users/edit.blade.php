@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="col-12 margin-bottom-15">
-                            <label class="label">ایمیل</label>
+                            <label class="label">موبایل</label>
                             <input type="phone" name="phone" value="{{ $user->phone }}" class="input" required>
                             @error('phone')
                                 <span class="text-error">{{ $message }}</span>
