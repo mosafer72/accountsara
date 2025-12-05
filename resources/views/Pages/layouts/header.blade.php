@@ -74,27 +74,32 @@
 <div class="notification-area p-4" data-lenis-prevent>
     <div class="notification-card d-grid gap-lg-4 gap-2" data-tilt>
         @if (auth()->check())
-            @foreach ($data["cart"] as $product)
-                <a href="#">
-                    <div class="card-item d-flex align-items-center gap-4">
-                        <div class="card-img-area">
-                            <img class="rounded-1 w-100" src="{{ asset('storage/'.$product->product->image) }}" width="60" alt="{{ $product->product->title }}">
+            @if (count($data["cart"]))
+                @foreach ($data["cart"] as $product)
+                    <a href="#">
+                        <div class="card-item d-flex align-items-center gap-4">
+                            <div class="card-img-area">
+                                <img class="rounded-1 w-100" src="{{ asset('storage/'.$product->product->image) }}" width="60" alt="{{ $product->product->title }}">
+                            </div>
+                            <div class="card-info">
+                                <small class="card-title d-block tcn-1">{{ $product->product->title }}</small>
+                                <small class="card-title d-block tcn-1"> نوع :
+                                @if($product->type)
+                                    اختصاصی
+                                @else
+                                    اشتراکی
+                                @endif
+                                </small>
+                                <small class="card-text d-block tcn-1 fs-sm"> قیمت : {{ number_format($product->unit_price) }} تومان</small>
+                            </div>
                         </div>
-                        <div class="card-info">
-                            <small class="card-title d-block tcn-1">{{ $product->product->title }}</small>
-                            <small class="card-title d-block tcn-1"> نوع :
-                            @if($product->type)
-                                 اختصاصی
-                            @else
-                                اشتراکی
-                            @endif
-                            </small>
-                            <small class="card-text d-block tcn-1 fs-sm"> قیمت : {{ number_format($product->unit_price) }} تومان</small>
-                        </div>
-                    </div>
-                </a>
-            @endforeach
-            <div><a href="{{route("cart.show")}}" class="btn btn-success btn-sm">مشاهده</a></div>
+                    </a>
+                @endforeach
+                <div><a href="{{route("cart.show")}}" class="btn btn-success btn-sm">مشاهده</a></div>
+            @else
+                <div class="alert alert-danger">سبد خرید شما خالی است.</div>
+            @endif
+            
         @else
             <a href="#">
                 <div class="card-item d-flex align-items-center gap-4">
