@@ -93,7 +93,7 @@ class SliderController extends Controller
         Storage::disk('public')->delete($slider->image);
         $slider->delete();
 
-        return redirect()->route('Admin.sliders.index')->with('success', 'اسلایدر حذف شد.');
+        return redirect()->route('admin.sliders.index')->with('success', 'اسلایدر حذف شد.');
     }
 
     /**

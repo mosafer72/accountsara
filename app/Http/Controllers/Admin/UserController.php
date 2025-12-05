@@ -36,7 +36,7 @@ class UserController extends Controller
             'is_admin' => $request->is_admin ?? false,
         ]);
 
-        return redirect()->route('Admin.users.index')->with('success', 'کاربر با موفقیت ایجاد شد.');
+        return redirect()->route('admin.users.index')->with('success', 'کاربر با موفقیت ایجاد شد.');
     }
 
     public function edit(User $user)
@@ -62,13 +62,13 @@ class UserController extends Controller
             $user->save();
         }
 
-        return redirect()->route('Admin.users.index')->with('success', 'کاربر با موفقیت ویرایش شد.');
+        return redirect()->route('admin.users.index')->with('success', 'کاربر با موفقیت ویرایش شد.');
     }
 
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('Admin.users.index')->with('success', 'کاربر حذف شد.');
+        return redirect()->route('admin.users.index')->with('success', 'کاربر حذف شد.');
     }
 
     // ✅ ورود به عنوان کاربر

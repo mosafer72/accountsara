@@ -46,7 +46,7 @@ class BannerController extends Controller
             'created_by' => Auth::id(),
         ]);
 
-        return redirect()->route('Admin.banners.index')->with('success', 'بنر با موفقیت ایجاد شد.');
+        return redirect()->route('admin.banners.index')->with('success', 'بنر با موفقیت ایجاد شد.');
     }
 
     public function edit(Banner $banner)
@@ -82,7 +82,7 @@ class BannerController extends Controller
             'end_at' => $request->end_at,
         ]);
 
-        return redirect()->route('Admin.banners.index')->with('success', 'بنر با موفقیت ویرایش شد.');
+        return redirect()->route('admin.banners.index')->with('success', 'بنر با موفقیت ویرایش شد.');
     }
 
     public function destroy(Banner $banner)
@@ -92,7 +92,7 @@ class BannerController extends Controller
         }
         $banner->delete();
 
-        return redirect()->route('Admin.banners.index')->with('success', 'بنر حذف شد.');
+        return redirect()->route('admin.banners.index')->with('success', 'بنر حذف شد.');
     }
 
     public function toggle(Banner $banner)
@@ -100,6 +100,6 @@ class BannerController extends Controller
         $banner->is_active = !$banner->is_active;
         $banner->save();
 
-        return redirect()->route('Admin.banners.index')->with('success', 'وضعیت بنر تغییر کرد.');
+        return redirect()->route('admin.banners.index')->with('success', 'وضعیت بنر تغییر کرد.');
     }
 }

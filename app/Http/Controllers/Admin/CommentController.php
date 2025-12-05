@@ -57,7 +57,7 @@ class CommentController extends Controller
 
         $comment->update($request->only('title','content'));
 
-        return redirect()->route('Admin.comments.index')->with('success', 'کامنت با موفقیت ویرایش شد.');
+        return redirect()->route('admin.comments.index')->with('success', 'کامنت با موفقیت ویرایش شد.');
     }
 
     public function toggle(Comment $comment)

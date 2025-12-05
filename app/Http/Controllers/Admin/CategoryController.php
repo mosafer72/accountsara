@@ -73,7 +73,7 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
         $category->delete();
 
-        return redirect()->route('Admin.categories.index')
+        return redirect()->route('admin.categories.index')
                          ->with('success', 'دسته‌بندی حذف شد.');
     }
 }

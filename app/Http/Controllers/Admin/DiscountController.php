@@ -84,19 +84,19 @@ class DiscountController extends Controller
             $discount->products()->detach();
         }
 
-        return redirect()->route('Admin.discounts.index')->with('success', 'تخفیف بروزرسانی شد.');
+        return redirect()->route('admin.discounts.index')->with('success', 'تخفیف بروزرسانی شد.');
     }
 
     public function destroy(Discount $discount)
     {
         $discount->delete();
-        return redirect()->route('Admin.discounts.index')->with('success', 'تخفیف حذف شد.');
+        return redirect()->route('admin.discounts.index')->with('success', 'تخفیف حذف شد.');
     }
 
     public function toggle(Discount $discount)
     {
         $discount->status = !$discount->status;
         $discount->save();
-        return redirect()->route('Admin.discounts.index')->with('success', 'وضعیت تخفیف تغییر یافت.');
+        return redirect()->route('admin.discounts.index')->with('success', 'وضعیت تخفیف تغییر یافت.');
     }
 }
