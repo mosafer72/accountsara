@@ -55,9 +55,9 @@
                         </div>
 
                         <div class="col-12 margin-bottom-15">
-                            <label class="label">ایمیل</label>
-                            <input type="email" name="email" value="{{ old('email') }}" class="input" required>
-                            @error('email')
+                            <label class="label">موبایل</label>
+                            <input type="phone" name="email" value="{{ old('phone') }}" class="input" required>
+                            @error('phone')
                                 <span class="text-error">{{ $message }}</span>
                             @enderror
                         </div>

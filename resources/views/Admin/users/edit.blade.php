@@ -58,25 +58,11 @@
 
                         <div class="col-12 margin-bottom-15">
                             <label class="label">ایمیل</label>
-                            <input type="email" name="email" value="{{ $user->email }}" class="input" required>
-                            @error('email')
+                            <input type="phone" name="phone" value="{{ $user->phone }}" class="input" required>
+                            @error('phone')
                                 <span class="text-error">{{ $message }}</span>
                             @enderror
                         </div>
-
-                        <div class="col-12 margin-bottom-15">
-                            <label class="label">رمز عبور</label>
-                            <input type="password" name="password" class="input" required>
-                            @error('password')
-                                <span class="text-error">{{ $message }}</span>
-                            @enderror
-                        </div>
-
-                        <div class="col-12 margin-bottom-15">
-                            <label class="label">تکرار رمز عبور</label>
-                            <input type="password" name="password_confirmation" class="input" required>
-                        </div>
-
                         <div class="col-12 margin-bottom-15">
                             <label class="label">نقش</label>
                             <select name="is_admin" class="input">
@@ -86,7 +72,7 @@
                         </div>
 
                         <div class="col-12 margin-top-20">
-                            <button type="submit" class="btn btn-brand">ایجاد کاربر</button>
+                            <button type="submit" class="btn btn-brand">بروزرسانی</button>
                             <a href="{{ route('admin.users.index') }}" class="btn btn-gray">بازگشت</a>
                         </div>
                     </div>

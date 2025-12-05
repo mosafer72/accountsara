@@ -44,7 +44,7 @@
                             <tr role="row">
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->phone }}</td>
                                 <td>{{ $user->is_admin ? 'مدیر' : 'کاربر' }}</td>
                                 <td>
                                     @if($user->is_active ?? true)
