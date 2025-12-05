@@ -128,7 +128,7 @@ class OtpAuthController extends Controller
         $user = User::where('phone', $phone)->first();
         if (!$user) {
             $user = User::create([
-                'name'     => 'کاربر ' . Str::substr($phone, -4),
+                // 'name'     => 'کاربر ' . Str::substr($phone, -4),
                 'phone'    => $phone,
                 'password' => Hash::make(Str::random(32)), // پسورد داخلی برای سازگاری
                 'email'    => null, // اگر ایمیل نمی‌خواهی
