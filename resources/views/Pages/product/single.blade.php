@@ -1,8 +1,6 @@
 @extends("Pages.layouts.master")
 @section("content")
-    @if(session('success'))
-        <div class="alert alert-success m-2 p-2">{{ session('success') }}</div>
-    @endif
+    
     <section class="team-profile-banner pb-120 mt-lg-0 mt-sm-15">
         <div class="container position-relative">
             <div class="row">
@@ -12,6 +10,9 @@
                 </div>
             </div>
             <div class="row">
+                @if(session('success'))
+                    <div class="alert alert-success m-2 p-2">{{ session('success') }}</div>
+                @endif
                 <div class="col-12 mb-lg-20 mb-15 pb-lg-10 pb-6">
                     <div class="parallax-banner-area parallax-container">
                         <div class="parallax-img team-banner position-relative"
