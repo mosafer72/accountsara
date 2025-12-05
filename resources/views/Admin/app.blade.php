@@ -34,7 +34,7 @@
         <li class="item-li i-tickets {{ request()->is('*/ticket*') ? 'is-active' : '' }}"><a href="{{ route("admin.tickets.index") }}"> تیکت ها</a></li>
         <li class="item-li i-discounts {{ request()->is('*/discount*') ? 'is-active' : '' }}"><a href="{{ route("admin.discounts.index") }}">تخفیف ها</a></li>
         <li class="item-li i-transactions {{ request()->is('*/order*') ? 'is-active' : '' }}"><a href="{{ route("admin.orders.index") }}">تراکنش ها</a></li>
-        <li class="item-li i-transactions {{ request()->is('*/setting*') ? 'is-active' : '' }}"><a href="{{ route("admin.settings.index") }}">تراکنش ها</a></li>
+        <li class="item-li i-transactions {{ request()->is('*/setting*') ? 'is-active' : '' }}"><a href="{{ route("admin.settings.index") }}">تنظیمات سایت</a></li>
     </ul>
 
 </div>
