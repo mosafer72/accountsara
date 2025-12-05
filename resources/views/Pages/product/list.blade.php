@@ -67,7 +67,7 @@
                                                     class="price-money bgn-3 d-flex align-items-center gap-3 py-2 px-3 h-100">
                                                     <div class="d-flex align-items-center gap-2">
                                                         <img class="" style="width:30px" src="/assets/img/price.png" alt="تتر">
-                                                        <span class="tcn-1 fs-sm">{{ number_format($product->price) }} تومان </span>
+                                                        <span class="tcn-1 fs-sm">{{ number_format($product->price * intval(setting("doller_price"))) }} تومان </span>
                                                     </div>
                                                 </div>
                                             </div>
