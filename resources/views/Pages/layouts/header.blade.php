@@ -78,7 +78,7 @@
                 <a href="#">
                     <div class="card-item d-flex align-items-center gap-4">
                         <div class="card-img-area">
-                            <img class="rounded-1 w-100" style="" src="/{{ $product->product->image }}" alt="نمایه" />
+                            <img class="rounded-1 w-100" src="{{ asset('storage/'.$product->image) }}" alt="{{ $product->title }}">
                         </div>
                         <div class="card-info">
                             <small class="card-title d-block tcn-1">{{ $product->product->title }}</small>
