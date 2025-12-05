@@ -38,7 +38,7 @@
                                 اشتراکی
                             @endif
              </div>
-            <div>{{ number_format($product->unit_price) }} تومان</div>
+            <div>{{ number_format($product->unit_price * intval(setting("doller_price"))) }} تومان</div>
           </div>
         </div>
       @endforeach
