@@ -3,7 +3,7 @@
     @if(session('success'))
         <div class="alert alert-success m-2 p-2">{{ session('success') }}</div>
     @endif
-    <section class="team-profile-banner pb-120 pt-120 mt-lg-0 mt-sm-15 mt-10">
+    <section class="team-profile-banner pb-120 mt-lg-0 mt-sm-15">
         <div class="container position-relative">
             <div class="row">
                 <div class="col-12">
