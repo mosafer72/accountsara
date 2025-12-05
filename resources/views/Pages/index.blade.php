@@ -315,7 +315,7 @@
               <i class="ti ti-coins fs-2xl tcn-1"></i>
             </div>
             <h4 class="card-title tcn-1 cursor-scale growDown2 title-anim">قیمت منصفانه دائم</h4>
-            <p class="card-text tcs-6">قیمت‌ها بدون افزایش الکی و با نرخ واقعی و ثابت به شما ارائه می‌شود.</p>
+            <p class="card-text tcs-6">قیمت‌ها بدون افزایش و نرخ واقعی و ثابت به شما ارائه می‌شود.</p>
           </div>
         </div>
 
@@ -335,7 +335,7 @@
               <i class="ti ti-scale fs-2xl tcn-1"></i>
             </div>
             <h4 class="card-title tcn-1 cursor-scale growDown2 title-anim">تنوع سرویس بالا</h4>
-            <p class="card-text tcs-6">ده‌ها نوع شماره و اکانت از کشورهای مختلف برای نیازهای مختلف شما فراهم است.</p>
+            <p class="card-text tcs-6">ده‌ها نوع شماره و اکانت از کشورهای مختلف برای نیازهای مختلف شما فراهم شده است.</p>
           </div>
         </div>
 
@@ -359,8 +359,8 @@
       <div class="row justify-content-between g-6">
         <div class="col-lg-6">
           <span class="display-three tcn-1 cursor-scale growUp mb-8 d-block title-anim">بروز باشید</span>
-          <span class="fs-lg tcn-6">سوال یا بازخوردی دارید؟ ما از اینکه ازت خبر داشته باشیم خوشحال میشویم. با
-            تیم ما تماس بگیرید یا از ما استفاده کنید</span>
+          <span class="fs-lg tcn-6">سوال یا بازخوردی دارید؟ ما از اینکه با شما در ارتباط باشیم خوشحال میشویم. با
+            تیم ما تماس بگیرید یا از پلتفرم ما استفاده کنید</span>
         </div>
         <div class="col-xl-5 col-lg-6">
           <form action="#">
