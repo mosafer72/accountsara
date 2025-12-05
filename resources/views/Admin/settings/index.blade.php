@@ -69,7 +69,7 @@
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">توضیحات فوتر سایت</label>
-                        <textarea name="footer_text" class="input" rows="3" placeholder="متن پایین سایت">  value="{{ setting('footer_text') }}"</textarea>
+                        <textarea name="footer_text" class="input" rows="3" placeholder="متن پایین سایت"> {{ setting('footer_text') }}</textarea>
                     </div>
 
                     <div class="col-12 margin-top-20">
