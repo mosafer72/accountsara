@@ -82,6 +82,7 @@
                     </tbody>
                 </table>
             </div>
+             {!! $users->links('pagination::default') !!}
         </div>
     </div>
 @endsection
