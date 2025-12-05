@@ -21,7 +21,7 @@
               <div class="game-card-border"></div>
               <div class="game-card-border-overlay"></div>
               <div class="game-img">
-                <img class="w-100 h-100" src="/{{ $product->product->image }}" alt="بازی">
+                <img class="w-100 h-100" {{ asset('storage/'.$product->product->image }}" alt="{{ $product->product->title }}">
               </div>
               <div class="game-link d-center">
                 <a href="{{ route('cart.delete',['id'=>$product->product_id]) }}" class="btn2">
