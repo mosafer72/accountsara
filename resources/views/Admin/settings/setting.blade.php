@@ -39,37 +39,37 @@
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">نام سایت</label>
-                        <input type="text" name="site_name" value="{{ old('site_name', $settings->site_name ?? '') }}" class="input" placeholder="مثلاً فروشگاه من">
+                        <input type="text" name="site_name" value="{{ setting('site_name') }}" class="input" placeholder="مثلاً فروشگاه من">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">ایمیل پشتیبانی</label>
-                        <input type="email" name="support_email" value="{{ old('support_email', $settings->support_email ?? '') }}" class="input" placeholder="info@example.com">
+                        <input type="email" name="support_email" value="{{ setting('support_email') }}" class="input" placeholder="info@example.com">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">شماره تماس</label>
-                        <input type="text" name="support_phone" value="{{ old('support_phone', $settings->support_phone ?? '') }}" class="input" placeholder="09123456789">
+                        <input type="text" name="support_phone"  value="{{ setting('support_phone') }}" class="input" placeholder="09123456789">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">آدرس</label>
-                        <input type="text" name="address" value="{{ old('address', $settings->address ?? '') }}" class="input" placeholder="تهران، خیابان مثال">
+                        <input type="text" name="address"   value="{{ setting('address') }}" class="input" placeholder="تهران، خیابان مثال">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">لینک اینستاگرام</label>
-                        <input type="text" name="instagram" value="{{ old('instagram', $settings->instagram ?? '') }}" class="input" placeholder="https://instagram.com/...">
+                        <input type="text" name="instagram"   value="{{ setting('instagram') }}" class="input" placeholder="https://instagram.com/...">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">لینک تلگرام</label>
-                        <input type="text" name="telegram" value="{{ old('telegram', $settings->telegram ?? '') }}" class="input" placeholder="https://t.me/...">
+                        <input type="text" name="telegram"   value="{{ setting('telegram') }}" class="input" placeholder="https://t.me/...">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">توضیحات فوتر سایت</label>
-                        <textarea name="footer_text" class="input" rows="3" placeholder="متن پایین سایت">{{ old('footer_text', $settings->footer_text ?? '') }}</textarea>
+                        <textarea name="footer_text" class="input" rows="3" placeholder="متن پایین سایت">  value="{{ setting('footer_text') }}"</textarea>
                     </div>
 
                     <div class="col-12 margin-top-20">
