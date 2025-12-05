@@ -3398,3 +3398,6 @@ ul li {
         top: 58px;
     }
 }
+.alert{
+  max-width: 300px;
+}
