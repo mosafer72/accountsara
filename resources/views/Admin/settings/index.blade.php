@@ -33,7 +33,6 @@
         <div class="form__box">
             <form action="{{ route('admin.settings.update') }}" method="POST" class="padding-30 bg-white border-radius-3">
                 @csrf
-                @method('PUT')
 
                 <div class="row no-gutters">
 
