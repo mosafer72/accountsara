@@ -38,32 +38,32 @@
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">نام سایت</label>
-                        <input type="text" name="site_name" value="{{ setting('site_name') }}" class="input" placeholder="مثلاً فروشگاه من">
+                      <input style="width:500px" type="text" name="site_name" value="{{ setting('site_name') }}" class="input" placeholder="مثلاً فروشگاه من">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">ایمیل پشتیبانی</label>
-                        <input type="email" name="support_email" value="{{ setting('support_email') }}" class="input" placeholder="info@example.com">
+                      <input style="width:500px" type="email" name="support_email" value="{{ setting('support_email') }}" class="input" placeholder="info@example.com">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">شماره تماس</label>
-                        <input type="text" name="support_phone"  value="{{ setting('support_phone') }}" class="input" placeholder="09123456789">
+                      <input style="width:500px" type="text" name="support_phone"  value="{{ setting('support_phone') }}" class="input" placeholder="09123456789">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">آدرس</label>
-                        <input type="text" name="address"   value="{{ setting('address') }}" class="input" placeholder="تهران، خیابان مثال">
+                      <input style="width:500px" type="text" name="address"   value="{{ setting('address') }}" class="input" placeholder="تهران، خیابان مثال">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">لینک اینستاگرام</label>
-                        <input type="text" name="instagram"   value="{{ setting('instagram') }}" class="input" placeholder="https://instagram.com/...">
+                      <input style="width:500px" type="text" name="instagram"   value="{{ setting('instagram') }}" class="input" placeholder="https://instagram.com/...">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
                         <label class="label">لینک تلگرام</label>
-                        <input type="text" name="telegram"   value="{{ setting('telegram') }}" class="input" placeholder="https://t.me/...">
+                      <input style="width:500px" type="text" name="telegram"   value="{{ setting('telegram') }}" class="input" placeholder="https://t.me/...">
                     </div>
 
                     <div class="col-12 margin-bottom-15">
