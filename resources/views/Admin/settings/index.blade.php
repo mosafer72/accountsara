@@ -70,7 +70,10 @@
                         <label class="label">توضیحات فوتر سایت</label>
                         <textarea name="footer_text" class="input" rows="3" placeholder="متن پایین سایت"> {{ setting('footer_text') }}</textarea>
                     </div>
-
+                    <div class="col-12 margin-bottom-15">
+                        <label class="label">قیمت دلار</label>
+                        <input type="text" name="telegram" value="{{ old('doller_price', $settings->doller_price ?? '') }}" class="input" placeholder="123400">
+                    </div>
                     <div class="col-12 margin-top-20">
                         <button type="submit" class="btn btn-brand">ذخیره تغییرات</button>
                     </div>
