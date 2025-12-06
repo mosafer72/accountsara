@@ -18,7 +18,7 @@ class SmsIrProvider implements SmsProvider
     {
         $key = trim($this->apiKey ?? config('services.smsir.api_key'), "\"' ");
         $line = trim($this->lineNumber ?? config('services.smsir.line_number'), "\"' ");
-        die($key."sdf".$line);
+        die($key."////////////////".$line);
         if (!$key)  throw new RuntimeException('Sms.ir API key is missing');
         if (!$line) throw new RuntimeException('Sms.ir line number is missing');
 
