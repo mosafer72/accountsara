@@ -70,7 +70,6 @@ class SmsIrProvider implements SmsProvider
      */
     private function curlRequest(string $url, array $payload, string $apiKey): array
     {
-        dd($apiKey);
         $ch = curl_init($url);
 
         curl_setopt_array($ch, [
@@ -78,7 +77,7 @@ class SmsIrProvider implements SmsProvider
             CURLOPT_POSTFIELDS      => json_encode($payload),
             CURLOPT_HTTPHEADER      => [
                 'Content-Type: application/json',
-                'X-API-KEY: ' . $apiKey
+                'api_key: ' . $apiKey
             ],
             CURLOPT_RETURNTRANSFER  => true,
             CURLOPT_TIMEOUT         => 10,
