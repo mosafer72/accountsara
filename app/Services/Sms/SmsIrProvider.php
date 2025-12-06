@@ -77,7 +77,7 @@ class SmsIrProvider implements SmsProvider
             CURLOPT_POSTFIELDS      => json_encode($payload),
             CURLOPT_HTTPHEADER      => [
                 'Content-Type: application/json',
-                'api_key: ' . $apiKey
+                'SMSIR_API_KEY: ' . $apiKey
             ],
             CURLOPT_RETURNTRANSFER  => true,
             CURLOPT_TIMEOUT         => 10,
