@@ -18,9 +18,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind(SmsProvider::class, function () {
-            return new KavenegarSmsProvider(config('services.kavenegar.key'));
-        });
+        $this->app->bind(SmsProvider::class, \App\Services\Sms\SmsIrProvider::class);
+
         $this->app->bind(PaymentGateway::class, function () {
             return new ZarinpalGateway();
         });
