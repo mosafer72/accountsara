@@ -70,6 +70,7 @@ class SmsIrProvider implements SmsProvider
      */
     private function curlRequest(string $url, array $payload, string $apiKey): array
     {
+        dd($payload);
         $ch = curl_init($url);
 
         curl_setopt_array($ch, [
