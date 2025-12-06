@@ -2,96 +2,152 @@
 
 namespace App\Services\Sms;
 
+use Illuminate\Support\Facades\Log;
 use RuntimeException;
 
 class SmsIrProvider implements SmsProvider
 {
     public function __construct(
         private readonly ?string $apiKey = null,
-        private readonly ?string $lineNumber = null
+        private readonly ?string $lineNumber = null,
     ) {}
 
     /**
-     * ارسال پیامک ساده با Sms.ir (نسخه V1 API)
+     * ارسال پیامک ساده
      */
     public function send(string $phone, string $message): void
     {
-        $key = trim($this->apiKey ?? config('services.smsir.api_key'), "\"' ");
-        $line = trim($this->lineNumber ?? config('services.smsir.line_number'), "\"' ");
-        if (!$key)  throw new RuntimeException('Sms.ir API key is missing');
-        if (!$line) throw new RuntimeException('Sms.ir line number is missing');
-
-        $endpoint = "https://api.sms.ir/v1/send";
-
         $payload = [
-            "lineNumber" => $line,
-            "message"    => $message,
-            "mobile"     => $phone,
+            'lineNumber' => $this->getLineNumber(),
+            'message'    => $message,
+            'mobile'     => $phone,
         ];
 
-        $response = $this->curlRequest($endpoint, $payload, $key);
+        $response = $this->request('https://api.sms.ir/v1/send', $payload);
 
-        if (!isset($response['status']) || $response['status'] !== 1) {
-            throw new RuntimeException("Sms.ir send failed: " . json_encode($response));
+        // اگر status != 1 بود، فقط لاگ کن؛ Exception پرتاب نکن
+        if (($response['status'] ?? 0) !== 1) {
+            Log::warning('Sms.ir send failed', [
+                'mobile'   => $phone,
+                'payload'  => $payload,
+                'response' => $response,
+            ]);
         }
     }
 
     /**
-     * ارسال پیامک OTP از طریق قالب (TemplateId)
+     * ارسال OTP با متد VERIFY
+     *
+     * @param string $parameterName  نام پارامتر قالب در پنل (مثلاً: code یا otp)
      */
-    public function sendOtp(string $phone, string $code, int $templateId): void
-    {
-        $key = $this->apiKey ?? config('services.smsir.api_key');
-        if (!$key) throw new RuntimeException('Sms.ir API key is missing');
-
-        $endpoint = "https://api.sms.ir/v1/send/verify";
-
+    public function sendOtp(
+        string $phone,
+        string $code,
+        int $templateId,
+        string $parameterName = 'code'
+    ): void {
         $payload = [
-            "mobile"     => $phone,
-            "templateId" => $templateId,
-            "parameters" => [
+            'mobile'     => $phone,
+            'templateId' => $templateId,
+            'parameters' => [
                 [
-                    "name"  => "code",
-                    "value" => $code,
-                ]
-            ]
+                    'name'  => $parameterName, // باید دقیقا همون Name قالب باشه
+                    'value' => $code,
+                ],
+            ],
         ];
 
-        $response = $this->curlRequest($endpoint, $payload, $key);
+        $response = $this->request('https://api.sms.ir/v1/send/verify', $payload);
 
-        if (!isset($response['status']) || $response['status'] !== 1) {
-            throw new RuntimeException("Sms.ir OTP failed: " . json_encode($response));
+        if (($response['status'] ?? 0) !== 1) {
+            Log::warning('Sms.ir OTP failed', [
+                'mobile'   => $phone,
+                'payload'  => $payload,
+                'response' => $response,
+            ]);
         }
     }
 
     /**
-     * درخواست CURL عمومی
+     * درخواست عمومی CURL به Sms.ir
      */
-    private function curlRequest(string $url, array $payload, string $apiKey): array
+    private function request(string $url, array $payload): array
     {
+        $apiKey = $this->getApiKey();
+
         $ch = curl_init($url);
 
         curl_setopt_array($ch, [
-            CURLOPT_POST            => true,
-            CURLOPT_POSTFIELDS      => json_encode($payload),
-            CURLOPT_HTTPHEADER      => [
+            CURLOPT_POST           => true,
+            CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
+            CURLOPT_HTTPHEADER     => [
                 'Content-Type: application/json',
-                'x-api-key: ' . $apiKey
+                'X-API-KEY: ' . $apiKey,
             ],
-            CURLOPT_RETURNTRANSFER  => true,
-            CURLOPT_TIMEOUT         => 10,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT        => 15,
         ]);
 
-        $res  = curl_exec($ch);
+        $raw  = curl_exec($ch);
         $err  = curl_error($ch);
         $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
         curl_close($ch);
 
-        if ($err || $code >= 400) {
-            throw new RuntimeException('Sms.ir request failed: ' . ($err ?: $res));
+        // خطای شبکه / CURL → لاگ، نه Exception
+        if ($err || $raw === false) {
+            Log::error('Sms.ir CURL error', [
+                'error' => $err,
+                'code'  => $code,
+                'url'   => $url,
+            ]);
+
+            return ['status' => 0, 'message' => 'curl_error'];
         }
 
-        return json_decode($res, true) ?: [];
+        $decoded = json_decode($raw, true);
+
+        if (! is_array($decoded)) {
+            Log::error('Sms.ir invalid JSON response', [
+                'raw'  => $raw,
+                'code' => $code,
+                'url'  => $url,
+            ]);
+
+            return ['status' => 0, 'message' => 'invalid_json'];
+        }
+
+        return $decoded;
+    }
+
+    /**
+     * گرفتن API Key از env + تمیز کردن کوتیشن / فاصله‌ها
+     */
+    private function getApiKey(): string
+    {
+        $key = $this->apiKey ?? config('services.smsir.api_key');
+
+        $key = trim((string) $key, " \t\n\r\0\x0B\"'");
+
+        if ($key === '') {
+            throw new RuntimeException('Sms.ir API key is missing');
+        }
+
+        return $key;
+    }
+
+    /**
+     * گرفتن شماره خط از env + تمیز کردن
+     */
+    private function getLineNumber(): string
+    {
+        $line = $this->lineNumber ?? config('services.smsir.line_number');
+
+        $line = trim((string) $line, " \t\n\r\0\x0B\"'");
+
+        if ($line === '') {
+            throw new RuntimeException('Sms.ir line number is missing');
+        }
+
+        return $line;
     }
 }
