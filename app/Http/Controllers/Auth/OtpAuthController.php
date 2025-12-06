@@ -28,6 +28,7 @@ class OtpAuthController extends Controller
 
     public function send(Request $request, SmsProvider $sms)
     {
+        dd($sms);
         // ولیدیشن شماره
         $request->validate([
             'phone' => ['required','string','min:8','max:20'],
@@ -66,7 +67,7 @@ class OtpAuthController extends Controller
         ]);
         // ارسال پیامک
         $message = "کد ورود شما: {$code}\nاعتبار: " . (self::OTP_TTL/60) . " دقیقه";
-        // $sms->send($phone, $message);
+        $sms->send($phone, $message);
         session('code',$code);
         RateLimiter::hit($key, 60); // پنالتی 60 ثانیه‌ای
 

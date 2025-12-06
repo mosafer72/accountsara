@@ -19,6 +19,10 @@ return [
     'kavenegar' => [
         'key' => env('KAVENEGAR_API_KEY'),
     ],
+    'smsir' => [
+        'api_key'    => env('SMSIR_API_KEY'),
+        'line_number'=> env('SMSIR_LINE_NUMBER'),
+    ],
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
