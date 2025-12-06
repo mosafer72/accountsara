@@ -66,7 +66,11 @@ class OtpAuthController extends Controller
         ]);
         // ارسال پیامک
         $message = "کد ورود شما: {$code}\nاعتبار: " . (self::OTP_TTL/60) . " دقیقه";
-        $sms->send($phone, $message);
+        try {
+            $sms->send($phone, $message);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
         session('code',$code);
         RateLimiter::hit($key, 60); // پنالتی 60 ثانیه‌ای
 
