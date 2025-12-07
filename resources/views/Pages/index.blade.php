@@ -117,8 +117,8 @@
               <div class="card-3d d-grid justify-content-center p-3">
                 <div class="img-area w-100 mb-8 position-relative">
                   <!-- <span
-                                                  class="card-date position-absolute top-0 start-0 py-2 px-3 mt-4 ms-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
-                                                  <i class="ti ti-calendar-due"></i> 15.02.2022</span> -->
+                                                      class="card-date position-absolute top-0 start-0 py-2 px-3 mt-4 ms-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                                      <i class="ti ti-calendar-due"></i> 15.02.2022</span> -->
                   <img class="w-100" src="{{ asset('storage/' . $slider->image) }}" width="60" alt="{{ $slider->title }}">
                   <span class="card-status position-absolute end-0 py-2 px-6 tcn-1 fs-sm">
                     <a href="{{ route("product.show_more", ["id" => $slider->id]) }}"
@@ -160,12 +160,13 @@
       <!-- teams card  -->
       <div class="row g-6 justify-content-md-start justify-content-center mb-lg-15 mb-10">
         @foreach ($shortcuts as $shortcut)
-          <a href="" class="col-xl-4 col-md-6">
-            <div class="team-card d-flex flex-column gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt=""
+          <div class="col-xl-4 col-md-6">
+            <a href="" class="team-card d-flex flex-column gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt=""
               style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;">
               <div class="d-flex">
                 <div class="team-thumb ms-4">
-                  <img class="w-100 rounded-circle" style="height:100%" src="{{ asset('storage/' . $shortcut->image) }}" alt="تیم">
+                  <img class="w-100 rounded-circle" style="height:100%" src="{{ asset('storage/' . $shortcut->image) }}"
+                    alt="تیم">
                 </div>
                 <div class="team-info w-100">
                   <div class="title-area d-flex gap-5 align-items-end mb-5">
@@ -197,8 +198,8 @@
                   class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
                   عضویت</a>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         @endforeach
       </div>
       <div class="d-center">
