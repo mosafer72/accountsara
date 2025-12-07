@@ -10,7 +10,7 @@
         <div class="breadcrumb">
             <ul>
                 <li><a href="{{ route('admin.dashboard') }}">پیشخوان</a></li>
-                <li><a href="{{ route('admin.shortcuts.index') }}" class="is-active">میانبرشو</a></li>
+                <li><a href="{{ route('admin.shortcuts.index') }}" class="is-active">میانبرها</a></li>
             </ul>
         </div>
 
@@ -46,7 +46,7 @@
                             <td><a href="">{{ $shortcut->id }}</a></td>
                             <td><a href="">{{ $shortcut->title }}</a></td>
                             <td>
-                                @if(isset($shortcut->image))
+                                @if(isset($shortcut->image) && $shortcut->image!="" )
                                     <a href="{{ asset('storage/'.$shortcut->image) }}" target="_blank">
                                         <img class="img__slideshow" src="{{ asset('storage/'.$shortcut->image) }}" alt="{{ $shortcut->title }}">
                                     </a>
