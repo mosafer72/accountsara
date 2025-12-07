@@ -28,6 +28,10 @@
                 <input type="text" id="title" name="title" class="text" placeholder="مثلاً دوره لاراول" value="{{ old('title') }}">
                 @error('title') <p class="text-error">{{ $message }}</p> @enderror
 
+                 <label for="title">آپشن(عامل تفکیک)</label>
+                <input type="text" id="option" name="option" class="text" placeholder="مثلاً main_page" value="{{ old('option') }}">
+                @error('option') <p class="text-error">{{ $message }}</p> @enderror
+
                 <label for="link">لینک:</label>
                 <input type="text" id="link" name="link" class="text" placeholder="مثلاً https://netcopy.ir" value="{{ old('link') }}">
                 @error('link') <p class="text-error">{{ $message }}</p> @enderror

@@ -45,7 +45,10 @@
 
                 <label for="title">عنوان میانبر:</label>
                 <input type="text" id="title" name="title" class="text" value="{{ old('title', $shortcut->title) }}">
-
+                
+                <label for="title">آپشن(عامل تفکیک)</label>
+                <input type="text" id="option" name="option" class="text" placeholder="مثلاً main_page" value="{{ old('link', $shortcut->option) }}">
+                
                 <label for="link">لینک:</label>
                 <input type="text" id="link" name="link" class="text" value="{{ old('link', $shortcut->link) }}">
 

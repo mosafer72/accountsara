@@ -45,7 +45,7 @@ class ShortcutController extends Controller
         // ذخیره رکورد در دیتابیس
         Shortcut::create([
             'title' => $request->title,
-            'subtitle' => $request->subtitle,
+            'option' => $request->option,
             'image' => isset($imagePath) ?  $imagePath : "",
             'link' => $request->link,
             'status' => true,
@@ -69,7 +69,7 @@ class ShortcutController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'subtitle' => 'nullable|string|max:255',
+            'option' => 'nullable|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
             'link' => 'nullable|url',
         ]);
