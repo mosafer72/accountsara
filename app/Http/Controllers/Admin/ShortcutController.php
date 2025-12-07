@@ -47,7 +47,7 @@ class ShortcutController extends Controller
         Slider::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
-            'image' => $imagePath ?  $imagePath : "",
+            'image' => isset($imagePath) ?  $imagePath : "",
             'link' => $request->link,
             'status' => true,
         ]);
