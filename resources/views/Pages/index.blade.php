@@ -22,7 +22,7 @@
           <div class="hero-content">
             <ul class="d-flex gap-3 fs-2xl fw-semibold heading-font mb-5 list-icon title-anim">
               <li>شماره مجازی</li>
-              <li>اکانت هوش مصنویی</li>
+              <li>اکانت هوش مصنوعی</li>
             </ul>
             <h1 class="hero-title display-one tcn-1 cursor-scale growUp mb-10">
               بهترین ها
