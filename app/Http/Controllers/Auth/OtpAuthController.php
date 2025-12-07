@@ -71,6 +71,7 @@ class OtpAuthController extends Controller
         } catch (\Throwable $th) {
             throw $th;
         }
+        die("hereee");
         session('code',$code);
         RateLimiter::hit($key, 60); // پنالتی 60 ثانیه‌ای
 
