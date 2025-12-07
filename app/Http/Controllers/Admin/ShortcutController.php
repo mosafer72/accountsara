@@ -44,7 +44,7 @@ class ShortcutController extends Controller
         // آپلود تصویر
 
         // ذخیره رکورد در دیتابیس
-        Slider::create([
+        Shortcut::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
             'image' => isset($imagePath) ?  $imagePath : "",
@@ -58,9 +58,8 @@ class ShortcutController extends Controller
     /**
      * فرم ویرایش اسلایدر
      */
-    public function edit($id)
+    public function edit(Shortcut $shortcut)
     {
-        dd(Shortcut::all());
         return view('Admin.shortcuts.edit', compact('shortcut'));
     }
 
