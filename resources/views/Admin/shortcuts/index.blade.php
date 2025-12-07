@@ -32,6 +32,7 @@
                         <tr role="row" class="title-row">
                             <th class="p-r-90">شناسه</th>
                             <th>عنوان</th>
+                            <th>اپشن</th>
                             <th>تصویر</th>
                             <th>لینک</th>
                             <th>تاریخ ایجاد</th>
@@ -45,6 +46,13 @@
                         <tr role="row">
                             <td><a href="">{{ $shortcut->id }}</a></td>
                             <td><a href="">{{ $shortcut->title }}</a></td>
+                            <td>
+                                @if(isset($shortcut->option) && $shortcut->option!="" )
+                                    <span>{{ $shortcut->option  }}</span>
+                                @else
+                                     بدون اپشن
+                                @endif
+                            </td>
                             <td>
                                 @if(isset($shortcut->image) && $shortcut->image!="" )
                                     <a href="{{ asset('storage/'.$shortcut->image) }}" target="_blank">
