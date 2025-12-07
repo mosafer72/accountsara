@@ -192,9 +192,6 @@
                   <span class="btn-half-border position-relative d-inline-block py-2 px-6 bgp-1 rounded-pill">
                     تک کاربره
                   </span>
-                  <span class="btn-half-border position-relative d-inline-block py-2 px-6 bgp-1 rounded-pill">
-                    تک کاربره
-                  </span>
                 </div>
                 <a href="teams-details.html"
                   class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
