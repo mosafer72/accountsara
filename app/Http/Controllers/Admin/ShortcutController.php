@@ -60,7 +60,7 @@ class ShortcutController extends Controller
      */
     public function edit($id)
     {
-        die($id);
+        dd(Shortcut::findOrFail($id));
         return view('Admin.shortcuts.edit', compact('shortcut'));
     }
 
