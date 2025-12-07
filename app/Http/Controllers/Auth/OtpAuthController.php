@@ -67,7 +67,7 @@ class OtpAuthController extends Controller
         // ارسال پیامک
         $message = "کد ورود شما: {$code}\nاعتبار: " . (self::OTP_TTL/60) . " دقیقه";
         try {
-            $sms->send($phone, $message);
+            $sms->sendOtp($phone, $code,"922288","code");
         } catch (\Throwable $th) {
             throw $th;
         }

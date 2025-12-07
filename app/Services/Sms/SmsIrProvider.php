@@ -35,11 +35,7 @@ class SmsIrProvider implements SmsProvider
         }
     }
 
-    /**
-     * ارسال OTP با متد VERIFY
-     *
-     * @param string $parameterName  نام پارامتر قالب در پنل (مثلاً: code یا otp)
-     */
+   
     public function sendOtp(
         string $phone,
         string $code,
