@@ -58,8 +58,9 @@ class ShortcutController extends Controller
     /**
      * فرم ویرایش اسلایدر
      */
-    public function edit(Shortcut $shortcut)
+    public function edit($id)
     {
+        die($id);
         return view('Admin.shortcuts.edit', compact('shortcut'));
     }
 
