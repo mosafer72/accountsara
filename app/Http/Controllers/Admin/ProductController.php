@@ -83,7 +83,8 @@ class ProductController extends Controller
             'discount_percent' => 'nullable|numeric|min:0|max:100',
             'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
             'banner' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
-            'type'      => 'required|in:0,1'
+            'type'      => 'required|in:0,1',
+            'is_active'      => 'required|in:0,1'
         ]);
 
         if ($request->hasFile('image')) {
@@ -100,7 +101,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'quantity' => $request->quantity,
             'price' => $request->price,
-            'is_active' => $request->has('is_active'),
+            'is_active' => $request->is_active,
             'category_id' => $request->category_id,
             'type' => $request->type,
             // 'active_at' => $request->active_at,
@@ -116,4 +117,7 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('admin.products.index')->with('success', 'محصول حذف شد.');
     }
+
+
+  
 }
