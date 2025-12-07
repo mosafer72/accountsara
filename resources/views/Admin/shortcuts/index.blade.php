@@ -50,7 +50,7 @@
                                 @if(isset($shortcut->option) && $shortcut->option!="" )
                                     <span>{{ $shortcut->option  }}</span>
                                 @else
-                                     بدون اپشن
+                                     بدون آپشن
                                 @endif
                             </td>
                             <td>
