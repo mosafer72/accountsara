@@ -22,8 +22,7 @@ class CheckoutController extends Controller
 
         return DB::transaction(function () use ($cart, $user) {
             // 1️⃣ محاسبه مبلغ‌ها
-            $subtotal = $cart->sum(fn($i) => $i->qty * $i->unit_price);
-            die($subtotal);
+            $subtotal = $cart->sum(fn($i) => $i->qty * $i->unit_price * setting('doller_price'));
             $coupon   = session('cart_coupon');
             $discount = $coupon['discount'] ?? 0;
             $total    = max($subtotal - $discount, 0);
