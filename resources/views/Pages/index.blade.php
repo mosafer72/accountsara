@@ -199,11 +199,6 @@
           </div>
         @endforeach
       </div>
-      <div class="d-center">
-        <button class="btn-half-border position-relative d-inline-block py-2 bgp-1 px-6 rounded-pill z-2 border-0">بیشتر
-          ببینید
-        </button>
-      </div>
     </div>
   </section>
   <!-- tournament section start -->
