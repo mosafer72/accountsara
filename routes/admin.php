@@ -18,6 +18,7 @@ Route::middleware(['auth',isAdmin::class])->prefix('admin')->as('admin.')->group
     Route::get('', [DashboardController::class,"index"])->name("dashboard");
     Route::get('orders', [OrderController::class,"index"])->name("orders.index");
     Route::resource('/sliders', SliderController::class);
+    Route::resource('/shortcuts', SliderController::class);
     Route::resource('/users', UserController::class);
     Route::patch('/users/{user}/toggle', [UserController::class, 'toggleStatus'])->name('users.toggle');
     Route::get('users/{user}/login-as', [UserController::class, 'loginAs'])->name('users.loginAs');
