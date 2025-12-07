@@ -88,10 +88,7 @@ class OtpAuthController extends Controller
         $phone = session('otp_phone');
         if (!$phone) return redirect()->route('otp.phone.form');
 
-        return redirect()->route('otp.verify.form', [
-            'phone' => $phone,
-            'expires_at' => session('otp_expires_at'),
-        ]);
+        return redirect()->route('otp.verify.form');
     }
 
     public function verify(Request $request)
