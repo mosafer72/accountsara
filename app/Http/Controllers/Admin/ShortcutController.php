@@ -33,19 +33,21 @@ class ShortcutController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'subtitle' => 'nullable|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,webp|max:2048',
+            'option' => 'nullable|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
             'link' => 'nullable|url',
         ]);
 
+        if ($request->hasFile('image')) {
+             $imagePath = $request->file('image')->store('shortcuts', 'public');
+        }
         // آپلود تصویر
-        $imagePath = $request->file('image')->store('shortcuts', 'public');
 
         // ذخیره رکورد در دیتابیس
         Slider::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
-            'image' => $imagePath,
+            'image' => $imagePath ?  $imagePath : "",
             'link' => $request->link,
             'status' => true,
         ]);

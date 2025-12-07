@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Shortcut extends Model
 {
       protected $fillable = [
-        'title', 'subtitle', 'image', 'link', 'status',
+        'title', 'option', 'image', 'link', 'status',
     ];
 }
