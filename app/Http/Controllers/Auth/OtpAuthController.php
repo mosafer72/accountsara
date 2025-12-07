@@ -69,7 +69,9 @@ class OtpAuthController extends Controller
         try {
             $sms->sendOtp($phone, $code,"922288","code");
         } catch (\Throwable $th) {
-            throw $th;
+            throw ValidationException::withMessages([
+                'phone' => "لطفاً {} ثانیه صبر کنید سپس دوباره درخواست دهید.",
+            ]);
         }
         die("hereee");
         session('code',$code);
