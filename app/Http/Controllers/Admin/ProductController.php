@@ -54,7 +54,7 @@ class ProductController extends Controller
             'quantity' => $request->quantity,
             'price' => $request->price,
             'image' => $imagePath,
-            'banner' => $bannerPath,
+            'banner' => isset($bannerPath) ? $bannerPath : "",
             'is_active' => $request->has('is_active'),
             'category_id' => $request->category_id,
             'user_id' => Auth::id(),
