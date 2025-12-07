@@ -88,7 +88,7 @@ class OtpAuthController extends Controller
         $phone = session('otp_phone');
         if (!$phone) return redirect()->route('otp.phone.form');
 
-        return view('Pages.auth.verify', [
+        return route('otp.verify.form', [
             'phone' => $phone,
             'expires_at' => session('otp_expires_at'),
         ]);
@@ -177,4 +177,19 @@ class OtpAuthController extends Controller
         $max = (int) str_pad('',  $len, '9');     // 99999
         return (string) random_int($min, $max);
     }
+
+    protected function invalid($request, ValidationException $exception)
+        {
+            // اگر این درخواست برای تأیید OTP باشد، برگرد به فرم verify
+            if ($request->routeIs('otp.verify')) {
+                return redirect()
+                    ->route('otp.verify.form')
+                    ->withErrors($exception->errors())
+                    ->withInput();
+            }
+
+            return parent::invalid($request, $exception);
 }
+}
+
+
