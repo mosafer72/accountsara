@@ -90,7 +90,6 @@ class OtpAuthController extends Controller
 
         return view('Pages.auth.verify', [
             'phone' => $phone,
-            "code"=>session('code'),
             'expires_at' => session('otp_expires_at'),
         ]);
     }
