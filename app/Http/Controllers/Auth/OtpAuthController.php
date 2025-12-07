@@ -39,21 +39,21 @@ class OtpAuthController extends Controller
 
         // ریت‌لیمیت براساس شماره+IP
         $key = 'otp_send:' . $phone . '|' . $request->ip();
-        // if (RateLimiter::tooManyAttempts($key, $perMinute = 5)) {
-        //     $seconds = RateLimiter::availableIn($key);
-        //     throw ValidationException::withMessages([
-        //         'phone' => "درخواست زیاد بود، لطفاً {$seconds} ثانیه دیگر تلاش کنید.",
-        //     ]);
-        // }
+        if (RateLimiter::tooManyAttempts($key, $perMinute = 5)) {
+            $seconds = RateLimiter::availableIn($key);
+            throw ValidationException::withMessages([
+                'phone' => "درخواست زیاد بود، لطفاً {$seconds} ثانیه دیگر تلاش کنید.",
+            ]);
+        }
 
         // جلوگیری از ارسال‌های خیلی پی‌درپی
         $last = Otp::where('phone', $phone)->latest()->first();
-        // if ($last && $last->created_at->diffInSeconds(now()) < self::RESEND_WINDOW_SECONDS) {
-        //     $wait = self::RESEND_WINDOW_SECONDS - $last->created_at->diffInSeconds(now());
-        //     throw ValidationException::withMessages([
-        //         'phone' => "لطفاً {$wait} ثانیه صبر کنید سپس دوباره درخواست دهید.",
-        //     ]);
-        // }
+        if ($last && $last->created_at->diffInSeconds(now()) < self::RESEND_WINDOW_SECONDS) {
+            $wait = self::RESEND_WINDOW_SECONDS - $last->created_at->diffInSeconds(now());
+            throw ValidationException::withMessages([
+                'phone' => "لطفاً {$wait} ثانیه صبر کنید سپس دوباره درخواست دهید.",
+            ]);
+        }
 
         // ساخت کد و ذخیره هش
         $code = $this->generateNumericCode(self::OTP_LENGTH);
