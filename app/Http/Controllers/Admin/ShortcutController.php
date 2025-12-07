@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Shortcut;
-use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 class ShortcutController extends Controller
@@ -14,7 +13,7 @@ class ShortcutController extends Controller
      */
     public function index()
     {
-        $shortcuts = Slider::latest()->get();
+        $shortcuts = Shortcut::latest()->get();
         return view('Admin.shortcuts.index', compact('shortcuts'));
     }
 
@@ -80,7 +79,7 @@ class ShortcutController extends Controller
         // در صورت وجود عکس جدید، عکس قبلی حذف و جایگزین شود
         if ($request->hasFile('image')) {
             Storage::disk('public')->delete($shortcut->image);
-            $data['image'] = $request->file('image')->store('sliders', 'public');
+            $data['image'] = $request->file('image')->store('shortcuts', 'public');
         }
 
         $shortcut->update($data);
@@ -91,10 +90,10 @@ class ShortcutController extends Controller
     /**
      * حذف اسلایدر
      */
-    public function destroy(Slider $slider)
+    public function destroy(Shortcut $shortcut)
     {
-        Storage::disk('public')->delete($slider->image);
-        $slider->delete();
+        Storage::disk('public')->delete($shortcut->image);
+        $shortcut->delete();
 
         return redirect()->route('admin.shortcuts.index')->with('success', 'اسلایدر حذف شد.');
     }
