@@ -12,7 +12,7 @@
                     <div class="alert alert-danger m-auto col-md-6 mb-5">{{ session('error') }}</div>
                 @endif
                 @if($errors->any())
-                    <div class="alert alert-danger alert alert-danger m-auto col-md-6 mb-5" style="width:unset !important">
+                    <div class="alert alert-danger alert alert-danger m-auto col-md-12 mb-5" style="max-width:unset !important">
                         <ul class="m-0">
                             @foreach($errors->all() as $error)
                                 <li>{{ $error }}</li>
