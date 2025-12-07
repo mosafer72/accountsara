@@ -58,9 +58,9 @@ class ShortcutController extends Controller
     /**
      * فرم ویرایش اسلایدر
      */
-    public function edit(Slider $slider)
+    public function edit(Shortcut $shortcut)
     {
-        return view('Admin.shortcuts.edit', compact('slider'));
+        return view('Admin.shortcuts.edit', compact('shortcut'));
     }
 
     /**
