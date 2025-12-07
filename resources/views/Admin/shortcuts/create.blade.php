@@ -7,7 +7,7 @@
     <div class="breadcrumb">
         <ul>
             <li><a href="{{ route('admin.dashboard') }}">پیشخوان</a></li>
-            <li><a href="{{ route('admin.sliders.index') }}">میانبرشو</a></li>
+            <li><a href="{{ route('admin.shortcuts.index') }}">میانبرشو</a></li>
             <li><a href="#" class="is-active">ایجاد میانبر جدید</a></li>
         </ul>
     </div>
@@ -15,13 +15,13 @@
     <div class="main-content font-size-13">
         <div class="tab__box">
             <div class="tab__items">
-                <a class="tab__item" href="{{ route('admin.sliders.index') }}">لیست میانبرها</a>
+                <a class="tab__item" href="{{ route('admin.shortcuts.index') }}">لیست میانبرها</a>
                 <a class="tab__item is-active">ایجاد میانبر جدید</a>
             </div>
         </div>
 
         <div class="bg-white padding-30 border-radius-3">
-            <form action="{{ route('admin.sliders.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.shortcuts.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <label for="title">عنوان میانبر:</label>

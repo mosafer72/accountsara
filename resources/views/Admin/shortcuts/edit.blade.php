@@ -6,7 +6,7 @@
     <div class="breadcrumb">
         <ul>
             <li><a href="{{ route('admin.dashboard') }}">پیشخوان</a></li>
-            <li><a href="{{ route('admin.sliders.index') }}">میانبرشو</a></li>
+            <li><a href="{{ route('admin.shortcuts.index') }}">میانبرشو</a></li>
             <li><a href="#" class="is-active">ویرایش میانبر</a></li>
         </ul>
     </div>
@@ -14,7 +14,7 @@
     <div class="main-content font-size-13">
         <div class="tab__box">
             <div class="tab__items">
-                <a class="tab__item" href="{{ route('admin.sliders.index') }}">لیست میانبرها</a>
+                <a class="tab__item" href="{{ route('admin.shortcuts.index') }}">لیست میانبرها</a>
                 <a class="tab__item is-active">ویرایش میانبر</a>
             </div>
         </div>
@@ -39,15 +39,15 @@
                     </div>
                 @endif
         <div class="bg-white padding-30 border-radius-3">
-            <form action="{{ route('admin.sliders.update', $slider->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.shortcuts.update', $shortcut->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
                 <label for="title">عنوان میانبر:</label>
-                <input type="text" id="title" name="title" class="text" value="{{ old('title', $slider->title) }}">
+                <input type="text" id="title" name="title" class="text" value="{{ old('title', $shortcut->title) }}">
 
                 <label for="link">لینک:</label>
-                <input type="text" id="link" name="link" class="text" value="{{ old('link', $slider->link) }}">
+                <input type="text" id="link" name="link" class="text" value="{{ old('link', $shortcut->link) }}">
 
                 <label for="image">تصویر جدید (اختیاری):</label>
                 <div class="file-upload">
@@ -57,9 +57,9 @@
                     </div>
                 </div>
 
-                @if($slider->image)
+                @if($shortcut->image)
                     <p>تصویر فعلی:</p>
-                    <img src="{{ asset('storage/'.$slider->image) }}" alt="" class="img__slideshow">
+                    <img src="{{ asset('storage/'.$shortcut->image) }}" alt="" class="img__slideshow">
                 @endif
 
                 <button type="submit" class="btn btn-netcopy_net">بروزرسانی</button>
