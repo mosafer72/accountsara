@@ -160,7 +160,7 @@
       <!-- teams card  -->
       <div class="row g-6 justify-content-md-start justify-content-center mb-lg-15 mb-10">
         @foreach ($shortcuts as $shortcut)
-          <div class="col-xl-4 col-md-6">
+          <a href="" class="col-xl-4 col-md-6">
             <div class="team-card d-flex flex-column gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt=""
               style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;">
               <div class="d-flex">
@@ -198,7 +198,7 @@
                   عضویت</a>
               </div>
             </div>
-          </div>
+          </a>
         @endforeach
       </div>
       <div class="d-center">
