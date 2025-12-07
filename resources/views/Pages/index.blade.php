@@ -150,425 +150,59 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-lg-15 mb-10">
-                    <h2 class="display-four tcn-1 cursor-scale growUp title-anim">تیم ها را پیدا کنید</h2>
+                    <h2 class="display-four tcn-1 cursor-scale growUp title-anim">میانبرها</h2>
                 </div>
             </div>
             <!-- teams card  -->
             <div class="row g-6 justify-content-md-start justify-content-center mb-lg-15 mb-10">
-                <div class="col-xl-4 col-md-6">
-                    <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;">
-                        <div class="team-thumb">
-                            <img class="w-100 rounded-circle" src="assets/img/team-logo1.png" alt="تیم">
-                        </div>
-                        <div class="team-info w-100">
-                            <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                <a href="teams-details.html">
-                                    <h4 class="tcn-1 cursor-scale growDown title-anim">لیکوئید</h4>
-                                </a>
-                                <span class="tcn-6">04/12</span>
+                @foreach ($shortcuts as $shortcut)
+                      <div class="col-xl-4 col-md-6">
+                        <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;">
+                            <div class="team-thumb">
+                                <img class="w-100 rounded-circle" src="{{ asset('storage/'.$shortcut->image) }}" alt="تیم">
                             </div>
-                            <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-users fs-2xl"></i>
-                                    <span class="tcn-6">3 بازیکن</span>
+                            <div class="team-info w-100">
+                                <div class="title-area d-flex gap-5 align-items-end mb-5">
+                                    <a href="teams-details.html">
+                                        <h4 class="tcn-1 cursor-scale growDown title-anim">{{ $shortcut->title }}</h4>
+                                    </a>
+                                    <span class="tcn-6">04/12</span>
                                 </div>
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-world fs-2xl"></i>
-                                    <span class="tcn-6">انگلیسی</span>
+                                <div class="player-info d-flex gap-6 align-items-center mb-6">
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <i class="ti ti-users fs-2xl"></i>
+                                        <span class="tcn-6">3 بازیکن</span>
+                                    </div>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <i class="ti ti-world fs-2xl"></i>
+                                        <span class="tcn-6">انگلیسی</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                <ul class="player-lists d-flex align-items-center">
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player1.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player2.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player3.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player4.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                        99+
-                                    </li>
-                                </ul>
-                                <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                    عضویت</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 130px; --y: 271px;">
-                        <div class="team-thumb">
-                            <img class="w-100 rounded-circle" src="assets/img/team-logo2.png" alt="تیم">
-                        </div>
-                        <div class="team-info w-100">
-                            <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                <a href="teams-details.html">
-                                    <h4 class="tcn-1 cursor-scale growDown title-anim">ویرتوس پرو</h4>
-                                </a>
-                                <span class="tcn-6">02/12</span>
-                            </div>
-                            <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-users fs-2xl"></i>
-                                    <span class="tcn-6">4 بازیکن</span>
+                                <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
+                                    <ul class="player-lists d-flex align-items-center">
+                                        <li class="rounded-circle overflow-hidden me-n4">
+                                            <img src="assets/img/player1.png" alt="بازیکن">
+                                        </li>
+                                        <li class="rounded-circle overflow-hidden me-n4">
+                                            <img src="assets/img/player2.png" alt="بازیکن">
+                                        </li>
+                                        <li class="rounded-circle overflow-hidden me-n4">
+                                            <img src="assets/img/player3.png" alt="بازیکن">
+                                        </li>
+                                        <li class="rounded-circle overflow-hidden me-n4">
+                                            <img src="assets/img/player4.png" alt="بازیکن">
+                                        </li>
+                                        <li class="rounded-circle overflow-hidden heading-font fs-base">
+                                            99+
+                                        </li>
+                                    </ul>
+                                    <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
+                                        عضویت</a>
                                 </div>
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-world fs-2xl"></i>
-                                    <span class="tcn-6">انگلیسی</span>
-                                </div>
-                            </div>
-                            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                <ul class="player-lists d-flex align-items-center">
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player1.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player2.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player3.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player4.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                        99+
-                                    </li>
-                                </ul>
-                                <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                    عضویت</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-                        <div class="team-thumb">
-                            <img class="w-100 rounded-circle" src="assets/img/team-logo3.png" alt="تیم">
-                        </div>
-                        <div class="team-info w-100">
-                            <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                <a href="teams-details.html">
-                                    <h4 class="tcn-1 cursor-scale growDown title-anim">فناتیک</h4>
-                                </a>
-                                <span class="tcn-6">04/12</span>
-                            </div>
-                            <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-users fs-2xl"></i>
-                                    <span class="tcn-6">3 بازیکن</span>
-                                </div>
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-world fs-2xl"></i>
-                                    <span class="tcn-6">انگلیسی</span>
-                                </div>
-                            </div>
-                            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                <ul class="player-lists d-flex align-items-center">
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player1.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player2.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player3.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player4.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                        99+
-                                    </li>
-                                </ul>
-                                <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                    عضویت</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 23px; --y: 13px;">
-                        <div class="team-thumb">
-                            <img class="w-100 rounded-circle" src="assets/img/team-logo4.png" alt="تیم">
-                        </div>
-                        <div class="team-info w-100">
-                            <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                <a href="teams-details.html">
-                                    <h4 class="tcn-1 cursor-scale growDown title-anim">سکرت</h4>
-                                </a>
-                                <span class="tcn-6">04/12</span>
-                            </div>
-                            <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-users fs-2xl"></i>
-                                    <span class="tcn-6">3 بازیکن</span>
-                                </div>
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-world fs-2xl"></i>
-                                    <span class="tcn-6">انگلیسی</span>
-                                </div>
-                            </div>
-                            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                <ul class="player-lists d-flex align-items-center">
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player1.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player2.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player3.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player4.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                        99+
-                                    </li>
-                                </ul>
-                                <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                    عضویت</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 52px; --y: 16px;">
-                        <div class="team-thumb">
-                            <img class="w-100 rounded-circle" src="assets/img/team-logo5.png" alt="تیم">
-                        </div>
-                        <div class="team-info w-100">
-                            <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                <a href="teams-details.html">
-                                    <h4 class="tcn-1 cursor-scale growDown title-anim">امپایر</h4>
-                                </a>
-                                <span class="tcn-6">04/12</span>
-                            </div>
-                            <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-users fs-2xl"></i>
-                                    <span class="tcn-6">3 بازیکن</span>
-                                </div>
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-world fs-2xl"></i>
-                                    <span class="tcn-6">انگلیسی</span>
-                                </div>
-                            </div>
-                            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                <ul class="player-lists d-flex align-items-center">
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player1.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player2.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player3.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player4.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                        99+
-                                    </li>
-                                </ul>
-                                <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                    عضویت</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-                        <div class="team-thumb">
-                            <img class="w-100 rounded-circle" src="assets/img/team-logo6.png" alt="تیم">
-                        </div>
-                        <div class="team-info w-100">
-                            <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                <a href="teams-details.html">
-                                    <h4 class="tcn-1 cursor-scale growDown title-anim">اوجی</h4>
-                                </a>
-                                <span class="tcn-6">04/12</span>
-                            </div>
-                            <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-users fs-2xl"></i>
-                                    <span class="tcn-6">3 بازیکن</span>
-                                </div>
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-world fs-2xl"></i>
-                                    <span class="tcn-6">انگلیسی</span>
-                                </div>
-                            </div>
-                            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                <ul class="player-lists d-flex align-items-center">
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player1.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player2.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player3.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player4.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                        99+
-                                    </li>
-                                </ul>
-                                <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                    عضویت</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-                        <div class="team-thumb">
-                            <img class="w-100 rounded-circle" src="assets/img/team-logo7.png" alt="تیم">
-                        </div>
-                        <div class="team-info w-100">
-                            <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                <a href="teams-details.html">
-                                    <h4 class="tcn-1 cursor-scale growDown title-anim">اوپتیک گیمینگ</h4>
-                                </a>
-                                <span class="tcn-6">04/12</span>
-                            </div>
-                            <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-users fs-2xl"></i>
-                                    <span class="tcn-6">3 بازیکن</span>
-                                </div>
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-world fs-2xl"></i>
-                                    <span class="tcn-6">انگلیسی</span>
-                                </div>
-                            </div>
-                            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                <ul class="player-lists d-flex align-items-center">
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player1.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player2.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player3.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player4.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                        99+
-                                    </li>
-                                </ul>
-                                <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                    عضویت</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-                        <div class="team-thumb">
-                            <img class="w-100 rounded-circle" src="assets/img/team-logo8.png" alt="تیم">
-                        </div>
-                        <div class="team-info w-100">
-                            <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                <a href="teams-details.html">
-                                    <h4 class="tcn-1 cursor-scale growDown title-anim">وین استریک</h4>
-                                </a>
-                                <span class="tcn-6">04/12</span>
-                            </div>
-                            <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-users fs-2xl"></i>
-                                    <span class="tcn-6">3 بازیکن</span>
-                                </div>
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-world fs-2xl"></i>
-                                    <span class="tcn-6">انگلیسی</span>
-                                </div>
-                            </div>
-                            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                <ul class="player-lists d-flex align-items-center">
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player1.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player2.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player3.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player4.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                        99+
-                                    </li>
-                                </ul>
-                                <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                    عضویت</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-                        <div class="team-thumb">
-                            <img class="w-100 rounded-circle" src="assets/img/team-logo9.png" alt="تیم">
-                        </div>
-                        <div class="team-info w-100">
-                            <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                <a href="teams-details.html">
-                                    <h4 class="tcn-1 cursor-scale growDown title-anim">پین گیمینگ</h4>
-                                </a>
-                                <span class="tcn-6">04/12</span>
-                            </div>
-                            <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-users fs-2xl"></i>
-                                    <span class="tcn-6">3 بازیکن</span>
-                                </div>
-                                <div class="d-flex gap-3 align-items-center">
-                                    <i class="ti ti-world fs-2xl"></i>
-                                    <span class="tcn-6">انگلیسی</span>
-                                </div>
-                            </div>
-                            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                <ul class="player-lists d-flex align-items-center">
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player1.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player2.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player3.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden me-n4">
-                                        <img src="assets/img/player4.png" alt="بازیکن">
-                                    </li>
-                                    <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                        99+
-                                    </li>
-                                </ul>
-                                <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                    عضویت</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="d-center">
                 <button class="btn-half-border position-relative d-inline-block py-2 bgp-1 px-6 rounded-pill z-2 border-0">بیشتر
