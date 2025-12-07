@@ -172,27 +172,20 @@
                                         <i class="ti ti-users fs-2xl"></i>
                                         <span class="tcn-6">سه نوع اکانت</span>
                                     </div>
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <i class="ti ti-world fs-2xl"></i>
-                                        <span class="tcn-6">انگلیسی</span>
-                                    </div>
                                 </div>
                                 <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
                                     <ul class="player-lists d-flex align-items-center">
                                         <li class="rounded-circle overflow-hidden me-n4">
-                                            <img src="assets/img/player1.png" alt="بازیکن">
+                                            تک کاربره
                                         </li>
                                         <li class="rounded-circle overflow-hidden me-n4">
-                                            <img src="assets/img/player2.png" alt="بازیکن">
+                                            دو کابره
                                         </li>
                                         <li class="rounded-circle overflow-hidden me-n4">
-                                            <img src="assets/img/player3.png" alt="بازیکن">
+                                            سه کاربره
                                         </li>
                                         <li class="rounded-circle overflow-hidden me-n4">
-                                            <img src="assets/img/player4.png" alt="بازیکن">
-                                        </li>
-                                        <li class="rounded-circle overflow-hidden heading-font fs-base">
-                                            99+
+                                            چهارکاربره
                                         </li>
                                     </ul>
                                     <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
