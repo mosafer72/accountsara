@@ -175,18 +175,6 @@ class OtpAuthController extends Controller
         return (string) random_int($min, $max);
     }
 
-    protected function invalid($request, ValidationException $exception)
-        {
-            // اگر این درخواست برای تأیید OTP باشد، برگرد به فرم verify
-            if ($request->routeIs('otp.verify')) {
-                return redirect()
-                    ->route('otp.verify.form')
-                    ->withErrors($exception->errors())
-                    ->withInput();
-            }
-
-            return parent::invalid($request, $exception);
-}
 }
 
 
