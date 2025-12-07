@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\Payments\ZarinpalGateway;
+use App\Services\Payments\ZibalGateway;
 use Illuminate\Support\ServiceProvider;
 use App\Services\Sms\SmsProvider;
 use App\Services\Sms\KavenegarSmsProvider;
@@ -21,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(SmsProvider::class, \App\Services\Sms\SmsIrProvider::class);
 
         $this->app->bind(PaymentGateway::class, function () {
-            return new ZarinpalGateway();
+            return new ZibalGateway();
         });
 
     }

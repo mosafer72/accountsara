@@ -19,6 +19,10 @@ return [
     'kavenegar' => [
         'key' => env('KAVENEGAR_API_KEY'),
     ],
+    'zibal' => [
+        'merchant' => env('ZIBAL_MERCHANT'),
+        'sandbox'  => env('ZIBAL_SANDBOX', true),
+    ],
     'smsir' => [
         'api_key'    => env('SMSIR_API_KEY'),
         'line_number'=> env('SMSIR_LINE_NUMBER'),
