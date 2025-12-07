@@ -91,7 +91,7 @@
                                             title="{{ $shortcut->status ? 'غیرفعال کردن' : 'فعال کردن' }}"></button>
                                 </form>
 
-                                <a href="{{ route('admin.shortcuts.edit', $shortcut) }}" class="item-edit mlg-15" title="ویرایش"></a>
+                                <a href="{{ route('admin.shortcuts.edit', $shortcut->id) }}" class="item-edit mlg-15" title="ویرایش"></a>
                                 <a href="{{ asset('storage/'.$shortcut->image) }}" target="_blank" class="item-eye mlg-15" title="مشاهده"></a>
                             </td>
                         </tr>
