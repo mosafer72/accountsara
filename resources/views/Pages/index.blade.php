@@ -166,7 +166,6 @@
                                     <a href="teams-details.html">
                                         <h4 class="tcn-1 cursor-scale growDown title-anim">{{ $shortcut->title }}</h4>
                                     </a>
-                                    <span class="tcn-6">04/12</span>
                                 </div>
                                 <div class="player-info d-flex gap-6 align-items-center mb-6">
                                     <div class="d-flex gap-3 align-items-center">
