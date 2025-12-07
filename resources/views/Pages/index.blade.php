@@ -179,7 +179,8 @@
                   </div>
                 </div>
               </div>
-              <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
+            </div>
+             <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
                 <div class="player-lists d-flex align-items-center">
                   <span class="rounded ">
                     تک کاربره
@@ -201,7 +202,6 @@
                   class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
                   عضویت</a>
               </div>
-            </div>
           </div>
         @endforeach
       </div>
