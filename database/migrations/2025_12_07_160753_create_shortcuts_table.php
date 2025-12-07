@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('shortcuts', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('subtitle')->nullable();
+            $table->string('image');
+            $table->string('link')->nullable();
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }
