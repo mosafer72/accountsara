@@ -7,7 +7,6 @@
                     <div class="form-area">
                         <div class="muted" style="margin-bottom:10px">
                           کد ارسال‌شده به: <strong>{{ $phone }}</strong>
-                          کد ارسال‌شده به: <strong>{{ $code }}</strong>
                         </div>
                         <h1 class="tcn-1 text-center cursor-scale growUp mb-10">ورود</h1>
                           <form  method="POST" action="{{ route('otp.verify') }}"  class="sign-in-form">

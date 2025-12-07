@@ -79,7 +79,6 @@ class OtpAuthController extends Controller
             ->route('otp.verify.form')
             ->with([
                 'otp_phone' => $phone,
-                'code'=> $code,
                 'otp_expires_at' => $otp->expires_at->toIso8601String(),
             ]);
     }
