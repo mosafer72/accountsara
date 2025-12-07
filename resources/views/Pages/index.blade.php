@@ -163,7 +163,7 @@
           <div class="col-xl-4 col-md-6">
             <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt=""
               style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;">
-              <div>
+              <div class="d-flex">
                 <div class="team-thumb">
                   <img class="w-100 rounded-circle" src="{{ asset('storage/' . $shortcut->image) }}" alt="تیم">
                 </div>
