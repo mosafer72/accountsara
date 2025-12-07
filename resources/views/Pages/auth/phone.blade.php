@@ -2,8 +2,7 @@
 @section("content")
     <section class="sign-in-section pb-120 pt-120 mt-lg-4 mt-sm-15 mt-10">
         <div class="container pt-120 mt-lg-4">
-            <div class="row justify-content-center">
-                @if(session('success'))
+            @if(session('success'))
                     <div class="alert alert-success m-2 p-2">{{ session('success') }}</div>
                 @endif
                 @if(session('error'))
@@ -18,6 +17,7 @@
                         </ul>
                     </div>
                 @endif
+            <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="form-area">
                         <h1 class="tcn-1 text-center cursor-scale growUp mb-10">ورود</h1>
