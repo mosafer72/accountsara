@@ -193,8 +193,7 @@
                     تک کاربره
                   </span>
                 </div>
-                <a href=""
-                  class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
+                <a href="" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
                   عضویت</a>
               </div>
             </div>
