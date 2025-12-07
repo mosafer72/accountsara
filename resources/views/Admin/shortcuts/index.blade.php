@@ -46,9 +46,13 @@
                             <td><a href="">{{ $shortcut->id }}</a></td>
                             <td><a href="">{{ $shortcut->title }}</a></td>
                             <td>
-                                <a href="{{ asset('storage/'.$shortcut->image) }}" target="_blank">
-                                    <img class="img__slideshow" src="{{ asset('storage/'.$shortcut->image) }}" alt="{{ $shortcut->title }}">
-                                </a>
+                                @if(isset($shortcut->image))
+                                    <a href="{{ asset('storage/'.$shortcut->image) }}" target="_blank">
+                                        <img class="img__slideshow" src="{{ asset('storage/'.$shortcut->image) }}" alt="{{ $shortcut->title }}">
+                                    </a>
+                                @else
+                                     بدون عکس
+                                @endif
                             </td>
                             <td>
                                 @if($shortcut->link)
