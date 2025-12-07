@@ -175,19 +175,19 @@
                                 </div>
                                 <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
                                     <div class="player-lists d-flex align-items-center">
-                                        <span class="rounded overflow-hidden me-n4">
+                                        <span class="rounded ">
                                             تک کاربره
                                         </span>
-                                        <span class="rounded overflow-hidden me-n4">
+                                        <span class="rounded ">
                                             تک کاربره
                                         </span>
-                                        <span class="rounded overflow-hidden me-n4">
+                                        <span class="rounded ">
                                             تک کاربره
                                         </span>
-                                        <span class="rounded overflow-hidden me-n4">
+                                        <span class="rounded ">
                                             تک کاربره
                                         </span>
-                                        <span class="rounded overflow-hidden me-n4">
+                                        <span class="rounded ">
                                             تک کاربره
                                         </span>
                                     </div>
