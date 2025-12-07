@@ -73,7 +73,6 @@ class OtpAuthController extends Controller
                 'phone' => "لطفاً {} ثانیه صبر کنید سپس دوباره درخواست دهید.",
             ]);
         }
-        die("hereee");
         session('code',$code);
         RateLimiter::hit($key, 60); // پنالتی 60 ثانیه‌ای
 
@@ -91,7 +90,7 @@ class OtpAuthController extends Controller
         $phone = session('otp_phone');
         if (!$phone) return redirect()->route('otp.phone.form');
 
-        return redirect()->route('otp.verify.form');
+        return view('Pages.auth.phone');
     }
 
     public function verify(Request $request)
