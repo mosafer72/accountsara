@@ -19,11 +19,12 @@ Route::middleware(['auth',isAdmin::class])->prefix('admin')->as('admin.')->group
     Route::get('', [DashboardController::class,"index"])->name("dashboard");
     Route::get('orders', [OrderController::class,"index"])->name("orders.index");
     Route::resource('/sliders', SliderController::class);
+    Route::patch('/sliders/{slider}/toggle', [SliderController::class, 'toggleStatus'])->name('sliders.toggle');
     Route::resource('/shortcuts', ShortcutController::class);
+    Route::patch('/shortcuts/{shortcut}/toggle', [ShortcutController::class, 'toggleStatus'])->name('shortcuts.toggle');
     Route::resource('/users', UserController::class);
     Route::patch('/users/{user}/toggle', [UserController::class, 'toggleStatus'])->name('users.toggle');
     Route::get('users/{user}/login-as', [UserController::class, 'loginAs'])->name('users.loginAs');
-    Route::patch('/sliders/{slider}/toggle', [SliderController::class, 'toggleStatus'])->name('sliders.toggle');
     Route::resource('categories', CategoryController::class);
     Route::patch('/categories/{category}/toggle', [CategoryController::class, 'toggleStatus'])->name('categories.toggle');
     Route::resource('products', ProductController::class);
