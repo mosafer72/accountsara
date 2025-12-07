@@ -198,39 +198,7 @@
             </div> -->
           
           <div class="team-card d-flex flex-column gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt=""
-              style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;">
-              <div class="d-flex">
-                <div class="team-thumb ms-4">
-                  <img class="w-100 rounded-circle" style="height:100%" src="{{ asset('storage/' . $shortcut->image) }}" alt="تیم">
-                </div>
-                <div class="team-info w-100">
-                  <div class="title-area d-flex gap-5 align-items-end mb-5">
-                    <a href="teams-details.html">
-                      <h4 class="tcn-1 cursor-scale growDown title-anim">{{ $shortcut->title }}</h4>
-                    </a>
-                  </div>
-                  <div class="player-info d-flex gap-6 align-items-center mb-6">
-                    <div class="d-flex gap-3 align-items-center">
-                      <i class="ti ti-users fs-2xl"></i>
-                      <span class="tcn-6">سه نوع اکانت</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                <div class="player-lists d-flex align-items-center justify-content-between w-100">
-                  <span class="btn-half-border position-relative d-inline-block py-2 px-6 bgp-1 rounded-pill">
-                    تک کاربره
-                  </span>
-                  <span class="btn-half-border position-relative d-inline-block py-2 px-6 bgp-1 rounded-pill">
-                    تک کاربره
-                  </span>
-                  <span class="btn-half-border position-relative d-inline-block py-2 px-6 bgp-1 rounded-pill">
-                    تک کاربره
-                  </span>
-                </div>
-                <a href="" class="w-100 text-center btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">مشاهده</a>
-              </div>
+              style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;"  style="background-url:url({{ asset('storage/' . $shortcut->image) }})" >
             </div>
           </div>
         @endforeach
