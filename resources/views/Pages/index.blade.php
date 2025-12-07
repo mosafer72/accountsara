@@ -198,7 +198,7 @@
             </div> -->
           
           <div class="team-card d-flex flex-column gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt=""
-              style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;"  style="background:url({{ asset('storage/' . $shortcut->image) }})" >
+              style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;background:url({{ asset('storage/' . $shortcut->image) }})" >
             </div>
           </div>
         @endforeach
