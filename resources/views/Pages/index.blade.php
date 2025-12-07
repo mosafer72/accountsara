@@ -170,7 +170,7 @@
                                 <div class="player-info d-flex gap-6 align-items-center mb-6">
                                     <div class="d-flex gap-3 align-items-center">
                                         <i class="ti ti-users fs-2xl"></i>
-                                        <span class="tcn-6">3 بازیکن</span>
+                                        <span class="tcn-6">سه نوع اکانت</span>
                                     </div>
                                     <div class="d-flex gap-3 align-items-center">
                                         <i class="ti ti-world fs-2xl"></i>
