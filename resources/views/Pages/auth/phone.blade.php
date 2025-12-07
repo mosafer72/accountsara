@@ -3,7 +3,9 @@
     <section class="sign-in-section pb-120 pt-120 mt-lg-4 mt-sm-15 mt-10">
         <div class="container pt-120 mt-lg-4">
             <div class="row justify-content-center">
-                @if(session('success'))
+                
+                <div class="col-lg-6 m-auto">
+                    @if(session('success'))
                     <div class="alert alert-success m-2 p-2 m-auto col-md-6 mb-5">{{ session('success') }}</div>
                 @endif
                 @if(session('error'))
@@ -18,7 +20,6 @@
                         </ul>
                     </div>
                 @endif
-                <div class="col-lg-6 m-auto">
                     <div class="form-area">
                         <h1 class="tcn-1 text-center cursor-scale growUp mb-10">ورود</h1>
                         <form action="{{ route('otp.send') }}" method="post" class="sign-in-form">
