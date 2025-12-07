@@ -27,7 +27,7 @@
             <h1 class="hero-title display-one tcn-1 cursor-scale growUp mb-10">
               بهترین ها
               <span class="d-block tcp-1"> را با ما</span>
-               تجربه کنید
+              تجربه کنید
             </h1>
           </div>
         </div>
@@ -50,12 +50,14 @@
                 @foreach ($last_products as $product)
                   <div class="card-item d-flex align-items-center gap-4">
                     <div class="card-img-area rounded-circle overflow-hidden">
-                      <img  class="w-100" src="{{ asset('storage/'.$product->image) }}" width="60" alt="{{ $product->title }}">
+                      <img class="w-100" src="{{ asset('storage/' . $product->image) }}" width="60"
+                        alt="{{ $product->title }}">
                     </div>
                     <div class="card-info">
                       <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">{{ $product->title }}
                       </h4>
-                      <p class="card-text tcs-1 fw-medium">{{ number_format($product->price * intval(setting("doller_price"))) }} تومان</p>
+                      <p class="card-text tcs-1 fw-medium">
+                        {{ number_format($product->price * intval(setting("doller_price"))) }} تومان</p>
                     </div>
                   </div>
                   <div class="hr-line"></div>
@@ -114,9 +116,9 @@
               <div class="card-3d d-grid justify-content-center p-3">
                 <div class="img-area w-100 mb-8 position-relative">
                   <!-- <span
-                          class="card-date position-absolute top-0 start-0 py-2 px-3 mt-4 ms-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
-                          <i class="ti ti-calendar-due"></i> 15.02.2022</span> -->
-                  <img class="w-100" src="{{ asset('storage/'.$slider->image) }}" width="60" alt="{{ $slider->title }}">
+                              class="card-date position-absolute top-0 start-0 py-2 px-3 mt-4 ms-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                              <i class="ti ti-calendar-due"></i> 15.02.2022</span> -->
+                  <img class="w-100" src="{{ asset('storage/' . $slider->image) }}" width="60" alt="{{ $slider->title }}">
                   <span class="card-status position-absolute end-0 py-2 px-6 tcn-1 fs-sm">
                     <a href="{{ route("product.show_more", ["id" => $slider->id]) }}"
                       class="dot-icon alt-icon pe-3">مشاهده</a>
@@ -127,7 +129,8 @@
                   <div class="card-info d-center gap-3 py-1 px-3">
                     <div class="d-flex align-items-center gap-2">
                       <img class="" style="width:30px;height:30px" src="assets/img/tether.png" alt="تتر">
-                      <span class="tcn-1 fs-xs">{{ number_format($slider->price * intval(setting("doller_price"))) }} تومان </span>
+                      <span class="tcn-1 fs-xs">{{ number_format($slider->price * intval(setting("doller_price"))) }} تومان
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -146,65 +149,46 @@
       </div>
   </section>
   <!-- 3D swiper section end-->
-<section class="teams-card-section pb-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mb-lg-15 mb-10">
-                    <h2 class="display-four tcn-1 cursor-scale growUp title-anim">میانبرها</h2>
-                </div>
-            </div>
-            <!-- teams card  -->
-            <div class="row g-6 justify-content-md-start justify-content-center mb-lg-15 mb-10">
-                @foreach ($shortcuts as $shortcut)
-                      <div class="col-xl-4 col-md-6">
-                        <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;">
-                            <div class="team-thumb">
-                                <img class="w-100 rounded-circle" src="{{ asset('storage/'.$shortcut->image) }}" alt="تیم">
-                            </div>
-                            <div class="team-info w-100">
-                                <div class="title-area d-flex gap-5 align-items-end mb-5">
-                                    <a href="teams-details.html">
-                                        <h4 class="tcn-1 cursor-scale growDown title-anim">{{ $shortcut->title }}</h4>
-                                    </a>
-                                </div>
-                                <div class="player-info d-flex gap-6 align-items-center mb-6">
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <i class="ti ti-users fs-2xl"></i>
-                                        <span class="tcn-6">سه نوع اکانت</span>
-                                    </div>
-                                </div>
-                                <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-                                    <div class="player-lists d-flex align-items-center">
-                                        <span class="rounded ">
-                                            تک کاربره
-                                        </span>
-                                        <span class="rounded ">
-                                            تک کاربره
-                                        </span>
-                                        <span class="rounded ">
-                                            تک کاربره
-                                        </span>
-                                        <span class="rounded ">
-                                            تک کاربره
-                                        </span>
-                                        <span class="rounded ">
-                                            تک کاربره
-                                        </span>
-                                    </div>
-                                    <a href="teams-details.html" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                                        عضویت</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            <div class="d-center">
-                <button class="btn-half-border position-relative d-inline-block py-2 bgp-1 px-6 rounded-pill z-2 border-0">بیشتر
-                    ببینید</button>
-            </div>
+  <section class="teams-card-section pb-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mb-lg-15 mb-10">
+          <h2 class="display-four tcn-1 cursor-scale growUp title-anim">میانبرها</h2>
         </div>
-    </section>
+      </div>
+      <!-- teams card  -->
+      <div class="row g-6 justify-content-md-start justify-content-center mb-lg-15 mb-10">
+        @foreach ($shortcuts as $shortcut)
+            <div class="col-xl-4 col-md-6">
+              <div class="team-card gap-6 p-xxl-8 p-4 bgn-4 box-style alt-box" data-tilt=""
+                style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;">
+                <div class="team-thumb">
+                  <img class="w-100 rounded-circle" src="{{ asset('storage/' . $shortcut->image) }}" alt="تیم">
+                </div>
+                <div class="team-info w-100">
+                  <div class="title-area d-flex gap-5 align-items-end mb-5">
+                    <a href="teams-details.html">
+                      <h4 class="tcn-1 cursor-scale growDown title-anim">{{ $shortcut->title }}</h4>
+                    </a>
+                  </div>
+                  <div class="player-info d-flex gap-6 align-items-center mb-6">
+                    <div class="d-flex gap-3 align-items-center">
+                      <i class="ti ti-users fs-2xl"></i>
+                      <span class="tcn-6">سه نوع اکانت</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        @endforeach
+    </div>
+    <div class="d-center">
+      <button class="btn-half-border position-relative d-inline-block py-2 bgp-1 px-6 rounded-pill z-2 border-0">بیشتر
+        ببینید</button>
+    </div>
+    </div>
+  </section>
   <!-- tournament section start -->
   <section class="tournament-section pb-120" id="tournament-hero">
     <!-- Diamond animation -->
@@ -235,10 +219,11 @@
                 <div class="tournament-card p-xl-4 p-3 bgn-4">
                   <div class="tournament-img mb-8 position-relative">
                     <div class="img-area overflow-hidden">
-                      <img class="w-100" src="{{ asset('storage/'.$row->image) }}" width="60" alt="{{ $row->title }}">
+                      <img class="w-100" src="{{ asset('storage/' . $row->image) }}" width="60" alt="{{ $row->title }}">
                     </div>
                     <span class="card-status position-absolute end-0 py-2 px-6 tcn-1 fs-sm">
-                      <a href="{{ route("product.show_more", ["id" => $row->id]) }}" class="dot-icon alt-icon pe-3">مشاهده</a>
+                      <a href="{{ route("product.show_more", ["id" => $row->id]) }}"
+                        class="dot-icon alt-icon pe-3">مشاهده</a>
                     </span>
                   </div>
                   <div class="tournament-content px-xl-4 px-sm-2">
@@ -253,7 +238,8 @@
                       <div class="price-money bgn-3 d-flex align-items-center gap-3 py-2 px-3 h-100">
                         <div class="d-flex align-items-center gap-2">
                           <img class="" style="width:50px" src="assets/img/tether.png" alt="تتر">
-                          <span class="tcn-1 fs-sm">{{ number_format($product->price * intval(setting("doller_price"))) }}</span>
+                          <span
+                            class="tcn-1 fs-sm">{{ number_format($product->price * intval(setting("doller_price"))) }}</span>
                         </div>
                       </div>
                       <div class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
@@ -269,7 +255,7 @@
                           <span class="tcn-6 fs-sm">{{ $product->sell_count }} خریدار </span>
                         </div>
                       </div>
-                      <a href="{{ route("product.show_more", ["id" => $row->id]) }}"  class="btn2">
+                      <a href="{{ route("product.show_more", ["id" => $row->id]) }}" class="btn2">
                         <i class="ti ti-arrow-left fs-2xl"></i>
                       </a>
                     </div>
@@ -310,7 +296,7 @@
                       <div class="game-card-border"></div>
                       <div class="game-card-border-overlay"></div>
                       <div class="game-img alt">
-                        <img  class="w-100" src="{{ asset('storage/'.$pro->image) }}" width="60" alt="{{ $pro->title }}">
+                        <img class="w-100" src="{{ asset('storage/' . $pro->image) }}" width="60" alt="{{ $pro->title }}">
                       </div>
                       <div class="game-link d-center">
                         <a href="{{ route("product.show_more", ["id" => $pro->id]) }}" class="btn2">
