@@ -193,7 +193,7 @@
                     تک کاربره
                   </span>
                 </div>
-                <a href="" class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">مشاهده</a>
+                <a href="" class="w-100 btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">مشاهده</a>
               </div>
             </div>
           </div>
