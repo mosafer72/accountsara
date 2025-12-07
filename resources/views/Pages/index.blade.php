@@ -165,7 +165,7 @@
               style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); --x: 19px; --y: 0px;">
               <div class="d-flex">
                 <div class="team-thumb">
-                  <img class="w-100 rounded-circle" src="{{ asset('storage/' . $shortcut->image) }}" alt="تیم">
+                  <img class="w-100 rounded-circle" style="height:100%" src="{{ asset('storage/' . $shortcut->image) }}" alt="تیم">
                 </div>
                 <div class="team-info w-100">
                   <div class="title-area d-flex gap-5 align-items-end mb-5">
