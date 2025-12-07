@@ -173,8 +173,6 @@
                                         <span class="tcn-6">سه نوع اکانت</span>
                                     </div>
                                 </div>
-                                </div>
-                                <div>
                                 <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
                                     <div class="player-lists d-flex align-items-center">
                                         <span class="rounded ">
