@@ -117,8 +117,8 @@
               <div class="card-3d d-grid justify-content-center p-3">
                 <div class="img-area w-100 mb-8 position-relative">
                   <!-- <span
-                                  class="card-date position-absolute top-0 start-0 py-2 px-3 mt-4 ms-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
-                                  <i class="ti ti-calendar-due"></i> 15.02.2022</span> -->
+                                      class="card-date position-absolute top-0 start-0 py-2 px-3 mt-4 ms-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                      <i class="ti ti-calendar-due"></i> 15.02.2022</span> -->
                   <img class="w-100" src="{{ asset('storage/' . $slider->image) }}" width="60" alt="{{ $slider->title }}">
                   <span class="card-status position-absolute end-0 py-2 px-6 tcn-1 fs-sm">
                     <a href="{{ route("product.show_more", ["id" => $slider->id]) }}"
@@ -179,28 +179,28 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
-              <div class="player-lists d-flex align-items-center">
-                <span class="rounded ">
-                  تک کاربره
-                </span>
-                <span class="rounded ">
-                  تک کاربره
-                </span>
-                <span class="rounded ">
-                  تک کاربره
-                </span>
-                <span class="rounded ">
-                  تک کاربره
-                </span>
-                <span class="rounded ">
-                  تک کاربره
-                </span>
+              <div class="d-between justify-content-center justify-content-xl-between flex-wrap w-100 gap-xxl-6 gap-3">
+                <div class="player-lists d-flex align-items-center">
+                  <span class="rounded ">
+                    تک کاربره
+                  </span>
+                  <span class="rounded ">
+                    تک کاربره
+                  </span>
+                  <span class="rounded ">
+                    تک کاربره
+                  </span>
+                  <span class="rounded ">
+                    تک کاربره
+                  </span>
+                  <span class="rounded ">
+                    تک کاربره
+                  </span>
+                </div>
+                <a href="teams-details.html"
+                  class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
+                  عضویت</a>
               </div>
-              <a href="teams-details.html"
-                class="btn-half-border position-relative d-inline-block py-2 px-6 rounded-pill z-2">درخواست
-                عضویت</a>
             </div>
           </div>
         @endforeach
