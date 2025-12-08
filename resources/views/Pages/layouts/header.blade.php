@@ -90,7 +90,7 @@
                                     اشتراکی
                                 @endif
                                 </small>
-                                <small class="card-text d-block tcn-1 fs-sm"> قیمت : {{ number_format($product->unit_price * intval(setting("doller_price")))) }} تومان</small>
+                                <small class="card-text d-block tcn-1 fs-sm"> قیمت : {{ number_format($product->unit_price * (intval(setting("doller_price")))) }} تومان</small>
                             </div>
                         </div>
                     </a>
