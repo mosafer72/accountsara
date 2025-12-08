@@ -50,7 +50,7 @@ class ZibalGateway implements PaymentGateway
 
         $payload = [
             'merchant'     => $this->merchant,
-            'amount'       => $amount,
+            'amount'       => intval($amount."0"),
             'callbackUrl'  => $callback.$order->number,
             'orderId'      => $order->number,
             'description'  => 'پرداخت سفارش ' . $order->number,
