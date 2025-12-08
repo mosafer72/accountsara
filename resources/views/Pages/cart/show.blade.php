@@ -64,14 +64,14 @@
           @if($coupon)
             <div class="d-flex justify-content-between tcn-1 mb-2">
               <span>تخفیف ({{ e($coupon['title']) }})</span>
-              <span>- {{ number_format($discount,2) }}</span>
+              <span>- {{ number_format($discount) }}</span>
             </div>
           @endif
 
           <hr class="my-3">
           <div class="d-flex justify-content-between tcn-1 fs-lg">
             <strong>مبلغ قابل پرداخت</strong>
-            <strong>{{ number_format($payable,2) }}</strong>
+            <strong>{{ number_format($payable) }}</strong>
           </div>
         </div>
       </div>
