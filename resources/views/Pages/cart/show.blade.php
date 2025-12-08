@@ -58,20 +58,20 @@
           <h5 class="tcn-1 mb-4">خلاصه پرداخت</h5>
           <div class="d-flex justify-content-between tcn-1 mb-2">
             <span>جمع جزء</span>
-            <span>{{ number_format($subtotal,2) }}</span>
+            <span>{{ number_format($subtotal) }} تومان </span>
           </div>
 
           @if($coupon)
             <div class="d-flex justify-content-between tcn-1 mb-2">
               <span>تخفیف ({{ e($coupon['title']) }})</span>
-              <span>- {{ number_format($discount) }}</span>
+              <span>- {{ number_format($discount) }} تومان </span>
             </div>
           @endif
 
           <hr class="my-3">
           <div class="d-flex justify-content-between tcn-1 fs-lg">
             <strong>مبلغ قابل پرداخت</strong>
-            <strong>{{ number_format($payable) }}</strong>
+            <strong>{{ number_format($payable) }} تومان </strong>
           </div>
         </div>
       </div>
