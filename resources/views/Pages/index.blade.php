@@ -244,7 +244,7 @@
                   </div>
                   <div class="tournament-content px-xl-4 px-sm-2">
                     <div class="tournament-info mb-5">
-                      <a href="tournaments-details.html" class="d-block">
+                      <a href="{{ route("product.show_more", ["id" => $product->id]) }}" class="d-block">
                         <h4 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">{{ $row->title }}</h4>
                       </a>
                       <span class="tcn-6 fs-sm">{{ $product->category->name }}</span>
@@ -320,7 +320,7 @@
                         </a>
                       </div>
                     </div>
-                    <a href="game.html">
+                    <a href="{{ route("product.show_more", ["id" => $product->id]) }}">
                       <h3 class="game-title mb-0 tcn-1 cursor-scale growDown2">{{ $pro->category->name }}</h3>
                     </a>
                   </div>

@@ -49,7 +49,7 @@
                                         </div>
                                         <div class="tournament-content px-xxl-4">
                                             <div class="tournament-info mb-5">
-                                                <a href="tournaments-details.html" class="d-block">
+                                                <a href="{{ route("product.show_more", ["id" => $product->id]) }}" class="d-block">
                                                     <h4
                                                         class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">{{ $product->title }}</h4>
                                                 </a>
