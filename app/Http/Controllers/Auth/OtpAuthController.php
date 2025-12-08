@@ -40,7 +40,7 @@ class OtpAuthController extends Controller
 
         // ریت‌لیمیت براساس شماره+IP
         $key = 'otp_send:' . $phone . '|' . $request->ip();
-        if (RateLimiter::tooManyAttempts($key, $perMinute = 5)) {
+        if (RateLimiter::tooManyAttempts($key, $perMinute = 1)) {
             $seconds = RateLimiter::availableIn($key);
             throw ValidationException::withMessages([
                 'phone' => "درخواست زیاد بود، لطفاً {$seconds} ثانیه دیگر تلاش کنید.",
