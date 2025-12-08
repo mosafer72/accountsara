@@ -28,6 +28,7 @@ class OtpAuthController extends Controller
 
     public function send(Request $request, SmsProvider $sms)
     {
+        // die("false");
         // ولیدیشن شماره
         $request->validate([
             'phone' => ['required','string','min:8','max:20'],
