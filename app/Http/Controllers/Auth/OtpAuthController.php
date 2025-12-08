@@ -91,7 +91,7 @@ class OtpAuthController extends Controller
         $phone = session('otp_phone');
         if (!$phone) return redirect()->route('otp.phone.form');
 
-        return view('Pages.auth.verify');
+        return view('Pages.auth.verify',compact("phone"));
     }
 
     public function verify(Request $request)
