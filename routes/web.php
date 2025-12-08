@@ -3,7 +3,7 @@
 require_once "auth.php";
 require_once "user.php";
 require_once "admin.php";
-// require_once "site_map.php";
+require_once "site_map.php";
 
 
 
