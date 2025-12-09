@@ -87,6 +87,7 @@
                                     </div>
                                 </div>
                                 @endforeach
+                                {{ $products->links }}
                                 @else
                                     <div class="alert alert-danger">
                                              به این دسته بندی به زودی محصول اضافه خواهد شد.
