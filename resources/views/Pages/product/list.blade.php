@@ -1,5 +1,10 @@
 @extends("Pages.layouts.master")
 @section("content")
+<style>
+    .pagination{
+        margin: auto;
+    }
+</style>
     <section class="tournament-section pb-120 pt-120 mt-sm-15 mt-120">
         <div class="tournament-wrapper alt">
             <div class="container">
