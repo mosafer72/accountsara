@@ -13,9 +13,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $last_products = Product::limit(3)->get();
+        $last_products = Product::orderBy("id","desc")->limit(3)->get();
         $sliders = Product::limit(7)->get();
-        $most_sell = Product::orderBy("id","desc")->limit(3)->get();
+        $most_sell = Product::orderBy("sell_count")->limit(3)->get();
         $low_sell = Product::orderBy("sell_count", "desc")->limit(7)->get();
         $shortcuts = Shortcut::orderBy("id", "desc")->get();
         return View("Pages.index", compact(["low_sell","shortcuts","sliders", "last_products", "most_sell"]));
