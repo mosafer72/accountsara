@@ -34,7 +34,7 @@ class ProductController extends Controller
     }
     public function show_by_category($id){
         $category=Category::findOrFail($id);
-        $products=Product::where("category_id",$category->id)->get();
+        $products=Product::where("category_id",$category->id)->paginate(9);
         return view("Pages.product.list",compact("products","category"));
     }
 
