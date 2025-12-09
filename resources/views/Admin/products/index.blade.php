@@ -33,7 +33,7 @@
                         <th class="p-r-90">شناسه</th>
                         <th>عنوان</th>
                         <th>دسته‌بندی</th>
-                        <th>تعداد</th>
+                        <th>قیمت</th>
                         <th>تخفیف (%)</th>
                         <th>تصویر</th>
                         <th>وضعیت</th>
@@ -46,7 +46,7 @@
                         <td>{{ $product->id }}</td>
                         <td>{{ $product->title }}</td>
                         <td>{{ $product->category->name ?? '-' }}</td>
-                        <td>{{ $product->quantity }}</td>
+                        <td>{{ $product->price }}</td>
                         <td>{{ $product->discount_percent }}</td>
                         <td>
                             @if($product->image)
