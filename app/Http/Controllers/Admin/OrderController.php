@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     public function index(){
-        $orders=Order::orderBy("created_at")->limit(10)->paginate(1);
+        $orders=Order::orderBy("created_at")->paginate(10);
         return view("Admin.orders.list",compact("orders"));
     }
 }
