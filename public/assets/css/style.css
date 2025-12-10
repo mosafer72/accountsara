@@ -3420,6 +3420,9 @@ ul li {
     border-radius: 100%;
 }
  @media (max-width: 991px) {
+  .header-section .navbar-toggle-item.open{
+    display: block !important;
+  }
   .header-section .custom-nav>li{
       margin-bottom: 15px;
   }
