@@ -3404,3 +3404,17 @@ ul li {
 .alert{
   max-width: 300px;
 }
+.header-section .custom-nav .sub-menu .menu-link{
+  margin-top: 10px;
+  position: relative;
+}
+.header-section .custom-nav .sub-menu .menu-link::after {
+    position: absolute;
+    content: "";
+    background: red;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
