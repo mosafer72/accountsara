@@ -22,18 +22,15 @@ class OrderController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Order $order)
     {
         $request->validate([
             'deliverity' => 'required|in:0,1'
         ]);
-        $order = Order::findOrFail($id);
-        if (!$order) {
-            $order->deliverity = $request->deliverity;
-            $order->save();
-            return redirect()->route('product.show_more', ["id" => $id])->with('success', 'محصول با با موفقیت به سید خرید شما اضافه شد.');
-        } else {
-            return redirect()->route('product.show_more', ["id" => $id])->withErrors('این محصول در سید خرید شما وجود دارد!');
-        }
+
+        $order->deliverity = $request->deliverity;
+        $order->save();
+        return redirect()->route('orders.index')->with('success', 'سفارش با با موفقیت برزرسانی شد.');
+
     }
 }
