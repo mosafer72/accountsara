@@ -9,10 +9,10 @@
         content: "";
         position: absolute;
         right: 0;
-        height: 100%;
+        height: 90%;
         background-color: red;
         width: 5px;
-        top: 0;
+        top: 5%;
     }
 </style>
     <div class="content">
