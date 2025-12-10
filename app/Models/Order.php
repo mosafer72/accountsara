@@ -11,7 +11,7 @@ class Order extends Model
 {
     protected $fillable = [
         'user_id','number','subtotal','coupon_discount','total','coupon_code',
-        'currency','status','paid_at','meta'
+        'currency','status','paid_at','meta','deliverity'
     ];
 
     protected $casts = [
