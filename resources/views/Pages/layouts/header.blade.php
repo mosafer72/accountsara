@@ -41,6 +41,9 @@
             </nav>
             <div class="header-btn-area d-flex align-items-center gap-sm-6 gap-3">
                 @if (!auth()->user())
+                     <button class="ntf-btn box-style fs-2xl p-4">
+                        <i class="ti ti-shopping-cart"></i>
+                    </button>
                     <a href="{{ route("login") }}"
                         class="btn-rounded-cus wallet-btn border-0 d-flex align-items-center gap-3 p-xl-2 p-0 ps-xl-6 rounded-5 position-relative">
                         <span class="btn-circle fs-2xl">
