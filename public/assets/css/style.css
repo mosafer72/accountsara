@@ -3407,7 +3407,7 @@ ul li {
 .header-section .custom-nav li{
   margin-top: 15px;
   position: relative;
-  padding-right: 30px;
+  padding-right: 30px !important;
 }
 .header-section .custom-nav li::after {
     position: absolute;
