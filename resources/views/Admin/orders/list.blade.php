@@ -14,6 +14,18 @@
         width: 5px;
         top: 5%;
     }
+    .delivered {
+        position: relative;
+    }
+    .delivered ::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        height: 90%;
+        background-color: red;
+        width: 5px;
+        top: 5%;
+    }
 </style>
     <div class="content">
         @include("Admin.layout.header")
