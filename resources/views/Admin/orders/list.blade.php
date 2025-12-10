@@ -5,7 +5,7 @@
     .pending{
         position: relative;
     }
-    .pending > td:first-child::after{
+    .pending > td:first-child a::after{
         position: absolute;
         right: 0;
         height: 100%;
