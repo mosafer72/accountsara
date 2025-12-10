@@ -3425,7 +3425,7 @@ ul li {
   }
   .header-section .custom-nav{
     position: fixed;
-    display: unset !important;
+    display: none;
     height: 100vh !important;
     max-height: unset !important;
   }
