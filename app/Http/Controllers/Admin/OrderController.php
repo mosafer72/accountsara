@@ -30,7 +30,7 @@ class OrderController extends Controller
         $order=Order::findOrFail($id);
         $order->deliverity = $request->deliverity;
         $order->save();
-        return redirect()->route('orders.index')->with('success', 'سفارش با با موفقیت برزرسانی شد.');
+        return redirect()->route('admin.orders.index')->with('success', 'سفارش با با موفقیت برزرسانی شد.');
 
     }
 }
