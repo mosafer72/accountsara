@@ -24,6 +24,8 @@
 
             @include maxQuery(575) {
                 top: 60px;
+                height: 100vh;
+                background: rgb(var(--n4));
             }
 
             &.open {
@@ -131,7 +133,7 @@
         @media (max-width: 991px) {
             display: grid;
             gap: 6px;
-            max-height: 280px;
+            max-height: 100%;
             overflow-y: auto;
             overflow-x: hidden;
             width: 100%;
