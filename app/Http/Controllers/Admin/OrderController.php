@@ -22,13 +22,12 @@ class OrderController extends Controller
     }
 
 
-    public function update(Request $request, Order $order)
-    {
-        dd($order);
+    public function update(Request $request, $id)
+    {   
         $request->validate([
             'deliverity' => 'required|in:0,1'
         ]);
-        
+        $order=Order::findOrFail($id);
         $order->deliverity = $request->deliverity;
         $order->save();
         return redirect()->route('orders.index')->with('success', 'سفارش با با موفقیت برزرسانی شد.');
