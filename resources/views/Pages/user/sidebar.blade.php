@@ -13,7 +13,4 @@
     .card-body{
         overflow:hidden;
     }
-    .navbar-brand .logo2{
-        height: 100px !important;
-    }
 </style>
