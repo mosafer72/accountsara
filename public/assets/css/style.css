@@ -3422,6 +3422,7 @@ ul li {
  @media (max-width: 991px) {
   .header-section .custom-nav{
     height: 100% !important;
+    max-width: unset !important;
   }
   .header-section .navbar-toggle-item{
     background-color:  rgb(var(--n4));
