@@ -83,7 +83,7 @@
                                 $counter = 1;
                             @endphp
                             @foreach ($orders as $order)
-                                <tr role="row">
+                                <tr role="row" class="<?php if($order->deliverity=1) {echo "delivered";} else{echo "pending";} ?>">
                                     <td><a href=""> {{ $counter }}</a></td>
                                     <td>{{ $order->number }}</td>
                                     <td>{{ $order->subtotal }}</td>
