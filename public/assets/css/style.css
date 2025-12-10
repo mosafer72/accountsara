@@ -3431,7 +3431,7 @@ ul li {
   }
   .header-section .custom-nav{
     position: fixed;
-    display: none;
+    display: table;
     height: 100vh !important;
     max-height: unset !important;
   }
