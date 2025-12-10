@@ -100,7 +100,7 @@
                                     <td class="i__oprations">
                                         <a href="" class="item-delete margin-left-10" title="حذف"></a>
                                         <a href="edit-transaction.html" class="item-edit  margin-left-10" title='ویرایش'></a>
-                                        <a href="{{ route("admin.order.show_more",$order->id) }}" class="item-eye" title='مشاهده'></a>
+                                        <a href="{{ route("admin.orders.show_more",$order->id) }}" class="item-eye" title='مشاهده'></a>
                                     </td>
                                 </tr>
                             @endforeach
