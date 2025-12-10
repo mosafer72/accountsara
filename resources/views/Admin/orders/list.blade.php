@@ -1,6 +1,14 @@
 @extends("Admin.app")
 
 @section("content")
+<style>
+    .pending{
+        position: relative;
+    }
+    .pending::after{
+        position: absolute;
+    }
+</style>
     <div class="content">
         @include("Admin.layout.header")
 
