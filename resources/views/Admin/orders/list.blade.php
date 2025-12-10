@@ -22,7 +22,7 @@
         position: absolute;
         right: 0;
         height: 90%;
-        background-color: red;
+        background-color: green;
         width: 5px;
         top: 5%;
     }
