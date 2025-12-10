@@ -3419,7 +3419,7 @@ ul li {
     height: 10px;
     border-radius: 100%;
 }
- @media (max-width: 991px) {
+ /* @media (max-width: 991px) {
   .header-section .custom-nav{
     height: 100% !important;
     max-height: unset !important;
@@ -3428,4 +3428,4 @@ ul li {
     background-color:  rgb(var(--n4));
     height: 100vh;
   }
- }
+ } */
