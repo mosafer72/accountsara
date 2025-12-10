@@ -19,7 +19,7 @@ Route::middleware(['auth',isAdmin::class])->prefix('admin')->as('admin.')->group
     Route::get('', [DashboardController::class,"index"])->name("dashboard");
     Route::get('orders', [OrderController::class,"index"])->name("orders.index");
     Route::get('orders/show_more/{id}', [OrderController::class,"show_more"])->name("orders.show_more");
-    Route::post('orders/update/{id}', [OrderController::class,"update"])->name("orders.update");
+    Route::put('orders/update/{id}', [OrderController::class,"update"])->name("orders.update");
     Route::resource('/sliders', SliderController::class);
     Route::patch('/sliders/{slider}/toggle', [SliderController::class, 'toggleStatus'])->name('sliders.toggle');
     Route::resource('/shortcuts', ShortcutController::class);
