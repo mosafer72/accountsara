@@ -7,6 +7,11 @@
     }
     .pending::after{
         position: absolute;
+        right: 0;
+        height: 100%;
+        background-color: red;
+        width: 5px;
+        top: 0;
     }
 </style>
     <div class="content">
