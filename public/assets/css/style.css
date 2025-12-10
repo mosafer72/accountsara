@@ -3404,12 +3404,12 @@ ul li {
 .alert{
   max-width: 300px;
 }
-.header-section .custom-nav .sub-menu .menu-link{
+.header-section .custom-nav li{
   margin-top: 15px;
   position: relative;
   padding-right: 30px;
 }
-.header-section .custom-nav .sub-menu .menu-link::after {
+.header-section .custom-nav li::after {
     position: absolute;
     content: "";
     background: #ffffff;
