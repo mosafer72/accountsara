@@ -3421,7 +3421,7 @@ ul li {
 }
  @media (max-width: 991px) {
   .header-section .custom-nav{
-    height: 100% !important;
+    height: 100vh !important;
     max-height: unset !important;
   }
   /* .header-section .navbar-toggle-item{
