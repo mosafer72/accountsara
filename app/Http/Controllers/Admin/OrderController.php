@@ -24,6 +24,7 @@ class OrderController extends Controller
 
     public function update(Request $request, Order $order)
     {
+        dd($order);
         $request->validate([
             'deliverity' => 'required|in:0,1'
         ]);
