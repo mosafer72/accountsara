@@ -27,7 +27,7 @@ class OrderController extends Controller
         $request->validate([
             'deliverity' => 'required|in:0,1'
         ]);
-
+        
         $order->deliverity = $request->deliverity;
         $order->save();
         return redirect()->route('orders.index')->with('success', 'سفارش با با موفقیت برزرسانی شد.');
