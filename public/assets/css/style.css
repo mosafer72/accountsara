@@ -3421,6 +3421,8 @@ ul li {
 }
  @media (max-width: 991px) {
   .header-section .custom-nav{
+    position: fixed;
+    display: unset !important;
     height: 100vh !important;
     max-height: unset !important;
   }
