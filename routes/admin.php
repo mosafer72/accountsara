@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth',isAdmin::class])->prefix('admin')->as('admin.')->group( function () {
     Route::get('', [DashboardController::class,"index"])->name("dashboard");
     Route::get('orders', [OrderController::class,"index"])->name("orders.index");
-    Route::get('orders/{id}/show_more', [OrderController::class,"show_more"])->name("orders.show_more");
+    Route::get('orders/show_more/{id}', [OrderController::class,"show_more"])->name("orders.show_more");
     Route::resource('/sliders', SliderController::class);
     Route::patch('/sliders/{slider}/toggle', [SliderController::class, 'toggleStatus'])->name('sliders.toggle');
     Route::resource('/shortcuts', ShortcutController::class);
