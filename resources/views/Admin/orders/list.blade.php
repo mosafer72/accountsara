@@ -2,10 +2,10 @@
 
 @section("content")
 <style>
-    .pending > td:first-child a{
+    .pending {
         position: relative;
     }
-    .pending > td:first-child a::after{
+    .pending ::after{
         content: "";
         position: absolute;
         right: 0;
