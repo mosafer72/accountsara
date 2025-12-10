@@ -3405,14 +3405,15 @@ ul li {
   max-width: 300px;
 }
 .header-section .custom-nav .sub-menu .menu-link{
-  margin-top: 10px;
+  margin-top: 15px;
   position: relative;
+  padding-right: 30px;
 }
 .header-section .custom-nav .sub-menu .menu-link::after {
     position: absolute;
     content: "";
-    background: red;
-    top: 0;
+    background: #ffffff;
+    top: 8px;
     right: 0;
     width: 10px;
     height: 10px;
