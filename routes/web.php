@@ -55,7 +55,7 @@ Route::middleware('auth')->group(function () {
 
 // this is for perfium
 Route::get('/', [HomeController::class,"index"]);
-Route::get('/products', [ProductController::class,"products"]);
+Route::get('/products', [ProductController::class,"index"]);
 
 
 
