@@ -9,7 +9,7 @@ use App\Models\Order;
 class OrderCotroller extends Controller
 {
     public function orders(){
-        $orders=Order::with("items")->orderBy("created_at","desc")->paginate(10);
+        $orders=Order::with("items")->where("user_id",auth()->user()->id)->orderBy("created_at","desc")->paginate(10);
         return view("Pages.user.orders.list",compact("orders"));
     }
 
