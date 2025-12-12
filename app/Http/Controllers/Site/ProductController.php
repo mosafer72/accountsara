@@ -14,6 +14,10 @@ use App\Models\Order;
 
 class ProductController extends Controller
 {
+    public function index(){
+        $products=Product::paginate(10);
+        return view("Pages.product.list",compact("products"));
+    }
     public function show_more($id){
         $product=Product::findOrFail($id);
         $order_ids=$this->get_order_ids($product->id);

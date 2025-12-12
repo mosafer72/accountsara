@@ -10,7 +10,13 @@
             <div class="container">
                 <div class="row justify-content-between align-items-end mb-8">
                     <div class="col">
-                        <h2 class="display-four tcn-1 cursor-scale growUp title-anim">{{ $category->name }}</h2>
+                        <h2 class="display-four tcn-1 cursor-scale growUp title-anim">
+                            @isset($category)  
+                            {{  $category->name }}
+                            @else
+                                محصولات
+                            @endisset
+                        </h2>
                     </div>
                 </div>
                 <div class="singletab tournaments-tab">
