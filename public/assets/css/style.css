@@ -2486,6 +2486,20 @@ ul li {
       background-size: 100% !important;
   }
 }
+@media (min-width: 500px) and (max-width: 700px) {
+  .teams-card-section .team-card {
+      height: 257px !important;
+      background-repeat: no-repeat !important;
+      background-size: 100% !important;
+  }
+}
+@media (min-width: 300px) and (max-width: 500px) {
+  .teams-card-section .team-card {
+      height: 157px !important;
+      background-repeat: no-repeat !important;
+      background-size: 100% !important;
+  }
+}
 @media (max-width: 1600px) {
   .teams-card-section .team-card {
     flex-direction: column;
