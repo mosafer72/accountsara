@@ -2472,13 +2472,18 @@ ul li {
   align-items: start;
   justify-content: center;
 }
+@media (max-width: 900px) {
+  .teams-card-section .team-card {
+      height: 257px !important;
+      background-repeat: no-repeat !important;
+      background-size: 100% !important;
+  }
+}
 @media (max-width: 1600px) {
   .teams-card-section .team-card {
     flex-direction: column;
     align-items: center;
-    height: 257px !important;
-    background-repeat: no-repeat !important;
-    background-size: 100% !important;
+ 
     
   }
   .teams-card-section .team-card .title-area,
