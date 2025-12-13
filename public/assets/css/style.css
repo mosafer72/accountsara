@@ -2474,7 +2474,7 @@ ul li {
 }
 @media (min-width: 900px) and (max-width: 1200px) {
   .teams-card-section .team-card {
-      height: 257px !important;
+      height: 170x !important;
       background-repeat: no-repeat !important;
       background-size: 100% !important;
   }
