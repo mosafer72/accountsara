@@ -2472,7 +2472,14 @@ ul li {
   align-items: start;
   justify-content: center;
 }
-@media (max-width: 900px) {
+@media (min-width: 900px) and (max-width: 1200px) {
+  .teams-card-section .team-card {
+      height: 257px !important;
+      background-repeat: no-repeat !important;
+      background-size: 100% !important;
+  }
+}
+@media (min-width: 700px) and (max-width: 900px) {
   .teams-card-section .team-card {
       height: 257px !important;
       background-repeat: no-repeat !important;
