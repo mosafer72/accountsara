@@ -3396,6 +3396,9 @@ ul li {
 @media (max-width: 767px) {
     .team-card {
       height: 196px !important;
+      height: 196px !important;
+        background-repeat: no-repeat !important;
+        background-size: 100% !important;
     }
     .notification-area, .user-account-popup{
         top: 58px;
