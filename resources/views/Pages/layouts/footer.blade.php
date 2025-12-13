@@ -81,7 +81,7 @@
     </div>
     <div class="row pb-4 pt-lg-4 pt-8 justify-content-between g-2">
       <div class="col-xxl-4 col-lg-6 order-last order-lg-first">
-        <span>کپی رایت © 1402 اکانتسرا | طراحی شده توسط لیلا زعفرانی</span>
+        <span>کپی رایت © 1402 اکانتسرا | طراحی شده توسط اکانتسرا</span>
       </div>
       <div class="col-xxl-3 col-lg-5">
         <ul class="d-flex align-items-center gap-lg-10 gap-sm-6 gap-4">
