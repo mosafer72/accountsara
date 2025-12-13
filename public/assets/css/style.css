@@ -2476,6 +2476,10 @@ ul li {
   .teams-card-section .team-card {
     flex-direction: column;
     align-items: center;
+    height: 166px !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% !important;
+    
   }
   .teams-card-section .team-card .title-area,
   .teams-card-section .team-card .player-info {
@@ -3395,7 +3399,7 @@ ul li {
 }
 @media (max-width: 767px) {
     .team-card {
-      height: 166px !important;
+        height: 166px !important;
         background-repeat: no-repeat !important;
         background-size: 100% !important;
     }
