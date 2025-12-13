@@ -14,8 +14,14 @@ use App\Models\Order;
 
 class ProductController extends Controller
 {
-    public function index(){
-        $products=Product::paginate(10);
+    public function index(Request $request){
+        $query = Product::query();
+
+        // جستجو
+        if ($request->search) {
+            $query->where('title', 'LIKE', "%{$request->search}%");
+        }
+        $products=$query->paginate(10);
         return view("Pages.product.list",compact("products"));
     }
     public function show_more($id){
