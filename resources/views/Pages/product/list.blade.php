@@ -3,7 +3,7 @@
 @section('title')
     خرید
     @isset($category)
-        اکانت {{ $category->name }}
+         {{ $category->name }}
     @else
         اکانت پریمیوم
     @endisset
@@ -13,7 +13,7 @@
 @section('meta_description')
 لیست قیمت و خرید
 @isset($category)
-    اکانت {{ $category->name }}
+     {{ $category->name }}
 @else
     اکانت‌های پریمیوم
 @endisset
