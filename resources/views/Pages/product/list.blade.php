@@ -7,6 +7,7 @@
             @else
                                 'اکانت پریمیوم'
             @endisset
+@endsection
 
 @section('meta_description')
         لیست قیمت و خرید انواع  | Accountsara
