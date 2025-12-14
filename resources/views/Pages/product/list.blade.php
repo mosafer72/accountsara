@@ -1,9 +1,22 @@
 @extends("Pages.layouts.master")
 
-@section('title', 'خرید انواع اکانت پریمیوم | Accountsara')
+@section('title')
+            لیست قیمت و خرید انواع  | Accountsara
+            @isset($category)  
+                            {{  $category->name }} اکانت    
+            @else
+                                'اکانت پریمیوم'
+            @endisset
 
 @section('meta_description')
-    لیست قیمت و خرید انواع اکانت پریمیوم با تحویل فوری و پشتیبانی کامل.
+        لیست قیمت و خرید انواع  | Accountsara
+                @isset($category)  
+                            {{  $category->name }}
+            @else
+                                'اکانت پریمیوم'
+            @endisset
+    
+    با تحویل فوری و پشتیبانی کامل.
 @endsection
 
 @section("content")
