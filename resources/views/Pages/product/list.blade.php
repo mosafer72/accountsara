@@ -12,9 +12,9 @@
 
 @section('meta_description')
 @isset($category)
-     {{ $category->name }}
+{{ $category->name }}
 @else
-    اکانت‌های پریمیوم
+اکانت‌های پریمیوم
 @endisset
 با لیست قیمت به‌روز، تحویل فوری و پشتیبانی کامل. خرید امن از Accountsara.
 @endsection
