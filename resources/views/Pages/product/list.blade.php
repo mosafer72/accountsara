@@ -17,7 +17,6 @@
     اکانت‌های پریمیوم
 @endisset
 با لیست قیمت به‌روز، تحویل فوری و پشتیبانی کامل. خرید امن از Accountsara.
-
 @endsection
 
 @section("content")
