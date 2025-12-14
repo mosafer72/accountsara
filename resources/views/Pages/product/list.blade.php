@@ -11,8 +11,10 @@
 
 @section('meta_description')
 لیست قیمت و خرید انواع  | Accountsara
-                @isset($category)  {{  $category->name }} @else
-'اکانت پریمیوم'
+            @isset($category)  
+                            {{  $category->name }} اکانت    
+            @else
+                                'اکانت پریمیوم'
             @endisset
             با تحویل فوری و پشتیبانی کامل.
 @endsection
