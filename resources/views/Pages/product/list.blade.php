@@ -1,4 +1,11 @@
 @extends("Pages.layouts.master")
+
+@section('title', 'خرید انواع اکانت پریمیوم | Accountsara')
+
+@section('meta_description')
+    لیست قیمت و خرید انواع اکانت پریمیوم با تحویل فوری و پشتیبانی کامل.
+@endsection
+
 @section("content")
 <style>
     .pagination{

@@ -1,5 +1,11 @@
 @extends("Pages.layouts.master")
 
+@section('title', 'خرید اکانت‌های پریمیوم با تحویل فوری | Accountsara')
+
+@section('meta_description')
+    خرید امن انواع اکانت پریمیوم با تحویل فوری، قیمت مناسب و پشتیبانی ۲۴ ساعته از Accountsara.
+@endsection
+
 @section("content")
   <!-- Hero Section start  -->
   <section class="hero-section pt-20 pb-120 position-relative">

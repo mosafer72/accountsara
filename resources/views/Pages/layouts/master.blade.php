@@ -5,13 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
-  <title>خانه - اکانتسرا</title>
+
+  <title>@yield('title', 'خرید اکانت پریمیوم و هوش مصنوعی | Accountsara')</title>
+  <meta name="description"
+    content="@yield('meta_description', 'خرید امن اکانت‌های پریمیوم با تحویل فوری و پشتیبانی ۲۴ ساعته از Accountsara')">
+
   <link rel="stylesheet" href="/assets/css/bootstrap.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
-@include("Pages.layouts.header")
+  @include("Pages.layouts.header")
 
   <!-- Preloader -->
   <div class="preloader">
@@ -24,11 +28,11 @@
   <div class="cursor"></div>
   <!-- Header area  -->
 
-@yield("content")
+  @yield("content")
 
   <!-- call to action section end -->
 
-@include("Pages.layouts.footer")
+  @include("Pages.layouts.footer")
 
   <!-- ==== js dependencies start ==== -->
   <!-- jquery  -->

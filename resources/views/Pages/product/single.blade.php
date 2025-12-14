@@ -1,4 +1,12 @@
 @extends("Pages.layouts.master")
+@section('title')
+    خرید {{ $product->title }} | تحویل فوری – Accountsara
+@endsection
+
+@section('meta_description')
+    خرید {{ $product->title }} با تحویل فوری، گارانتی فعال و پشتیبانی ۲۴ ساعته از Accountsara.
+@endsection
+
 @section("content")
     
     <section class="team-profile-banner pb-120 mt-lg-0 mt-sm-15">
