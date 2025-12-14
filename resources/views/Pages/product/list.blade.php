@@ -11,13 +11,13 @@
 @endsection
 
 @section('meta_description')
-لیست قیمت و خرید
-@isset($category)
-     {{ $category->name }}
-@else
-    اکانت‌های پریمیوم
-@endisset
-با تحویل فوری، پشتیبانی کامل و خرید امن از Accountsara.
+    لیست قیمت و خرید
+    @isset($category)
+        {{ $category->name }}
+    @else
+        اکانت‌های پریمیوم
+    @endisset
+    با تحویل فوری، پشتیبانی کامل و خرید امن از Accountsara.
 @endsection
 
 @section("content")
