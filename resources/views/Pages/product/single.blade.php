@@ -1,4 +1,5 @@
 @extends("Pages.layouts.master")
+
 @section('title')
     خرید {{ $product->title }} | تحویل فوری – Accountsara
 @endsection
